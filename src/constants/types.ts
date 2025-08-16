@@ -16,7 +16,7 @@ export type Stack = {
 export type Project = {
   name: string;
   description: string;
-  stacks: Stack[];
+  stacks?: Stack[];
   image: string;
   link: string;
 };

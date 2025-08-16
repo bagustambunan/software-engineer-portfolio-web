@@ -8,7 +8,7 @@ export default function PageTitle({ title, description }: { title: string, descr
   return (
     <div>
       <h1>{title}</h1>
-      {description && <p>{description}</p>}
+      {description && <p><i>{description}</i></p>}
     </div>
   )
 }

@@ -17,7 +17,7 @@ export default function Projects() {
               <h2>{project.name}</h2>
               <p>{project.description}</p>
               <div className={styles.projectStacksContainer}>
-                {project.stacks.map((stack) => (
+                {project.stacks?.map((stack) => (
                   <img src={stack.icon} alt={stack.name} title={stack.name} />
                 ))}
               </div>

@@ -1,7 +1,7 @@
 .projectListContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   margin-top: 36px;
 }
 
@@ -12,8 +12,8 @@
 }
 
 .projectImageContainer > img {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 10%;
 }
