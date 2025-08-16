@@ -5,6 +5,8 @@
   --text-color-with-opacity: rgba(255, 255, 255, 0.5);
   --background-color: #242424;
 
+  --app-padding: 60px;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -32,6 +34,18 @@
   }
 }
 
+@media (max-width: 600px) {
+  :root {
+    --app-padding: 20px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  :root {
+    --app-padding: 40px;
+  }
+}
+
 a {
   font-weight: 500;
   color: var(--primary-color);
@@ -44,10 +58,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
-  /* min-width: 320px; */
-  padding: 60px;
-  /* min-height: 100vh; */
+  padding: var(--app-padding);
 }
 
 hi, h2 {

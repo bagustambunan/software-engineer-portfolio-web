@@ -38,3 +38,9 @@
   width: 30px;
   height: 30px;
 }
+
+@media (max-width: 600px) {
+  .projectContainer {
+    flex-direction: column;
+  }
+}
