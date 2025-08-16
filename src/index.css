@@ -1,4 +1,6 @@
 :root {
+  --background-image: url('/images/paper-white.png');
+
   --primary-color: #84CCF8;
   --primary-color-hover: #106194;
   --text-color: rgba(255, 255, 255, 0.87);
@@ -26,6 +28,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --background-image: url('/images/paper-black.png');
+
     --text-color: #213547;
     --text-color-with-opacity: rgba(0, 0, 0, 0.5);
     --background-color: #ffffff;
@@ -58,6 +62,10 @@ body {
   margin: 0;
   display: flex;
   padding: var(--app-padding);
+  background-image: var(--background-image);
+  background-repeat: repeat;
+  background-size: 24px 24px;
+  min-height: 100vh;
 }
 
 hi, h2 {
