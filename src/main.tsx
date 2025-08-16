@@ -6,6 +6,7 @@ import Layout from './layout'
 import Home from './pages/Home/index.tsx'
 import Projects from './pages/Projects/index.tsx'
 import Contact from './pages/Contact/index.tsx'
+import routes from './constants/route.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,8 +14,8 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path={routes.projects} element={<Projects />} />
+          <Route path={routes.contact} element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

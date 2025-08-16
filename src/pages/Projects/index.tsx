@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageTitle from '../../components/PageTitle'
-import { projects } from './constants'
+import { projects } from "../../constants"
 import styles from './style.module.css'
 
 export default function Projects() {
@@ -11,14 +11,14 @@ export default function Projects() {
         {projects.map((project) => (
           <div className={styles.projectContainer}>
             <div className={styles.projectImageContainer}>
-              <img src={project.image} alt={project.name} />
+              <img src={project.image} alt={project.name} title={project.name} />
             </div>
             <div className={styles.projectInfoContainer}>
               <h2>{project.name}</h2>
               <p>{project.description}</p>
               <div className={styles.projectStacksContainer}>
                 {project.stacks.map((stack) => (
-                  <img src={stack.icon} alt={stack.name} />
+                  <img src={stack.icon} alt={stack.name} title={stack.name} />
                 ))}
               </div>
               <Link to={project.link} target="_blank">View Project ↗️</Link>

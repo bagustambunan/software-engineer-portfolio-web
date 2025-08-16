@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
-import { profile } from "./constants";
+import { profile } from "../../constants";
 import styles from './style.module.css'
 
 export default function Contact() {

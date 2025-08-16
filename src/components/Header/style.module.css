@@ -27,10 +27,15 @@
 .appNav {
   display: flex;
   flex-direction: row;
+  gap: 16px;
 }
 
-.appNav > *:not(:last-child)::after {
-  content: "•";
-  margin: 0 12px;
-  color: var(--text-color-with-opacity);
+.appNav a {
+  padding: 8px 0px;
+}
+
+.appNav a.activeLink {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 8px 16px;
 }
