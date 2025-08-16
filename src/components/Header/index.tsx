@@ -9,8 +9,8 @@ export default function Header() {
         <p>Software Engineer</p>
       </div>
       <div className={styles.appNav}>
-        <Link to="/projects">Proud Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/projects">📝 Proud Projects</Link>
+        <Link to="/contact">💬 Contact</Link>
       </div>
     </header>
   )
