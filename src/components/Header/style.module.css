@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  width: calc(100vw - 32px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.appTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.appTitle h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -12px;
+}
+
+.appTitle p {
+  opacity: 0.5;
+}
+
+.appNav {
+  display: flex;
+  flex-direction: row;
+}
+
+.appNav > *:not(:last-child)::after {
+  content: "•";
+  margin: 0 12px;
+  color: #bdbdbd;
+}
