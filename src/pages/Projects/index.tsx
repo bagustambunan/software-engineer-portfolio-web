@@ -6,7 +6,7 @@ import styles from './style.module.css'
 export default function Projects() {
   return (
     <div>
-      <PageTitle title="Projects" description="List of projects I'm proud of." />
+      <PageTitle title="📝 Proud Projects" description="List of projects I'm proud of." />
       <div className={styles.projectListContainer}>
         {projects.map((project) => (
           <div className={styles.projectContainer}>

@@ -1,0 +1,9 @@
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.linkSeparator {
+  color: var(--text-color-with-opacity);
+}
