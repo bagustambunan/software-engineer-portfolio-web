@@ -1,0 +1,40 @@
+.projectListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.projectImageContainer > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.projectInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projectInfoContainer > h2 {
+  margin-bottom: -1rem;
+}
+
+.projectStacksContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.projectStacksContainer > img {
+  width: 30px;
+  height: 30px;
+}
