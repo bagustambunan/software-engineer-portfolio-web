@@ -4,6 +4,7 @@
   --text-color: rgba(255, 255, 255, 0.87);
   --text-color-with-opacity: rgba(255, 255, 255, 0.5);
   --background-color: #242424;
+  --button-color: #1a1a1a;
 
   --app-padding: 60px;
 
@@ -28,9 +29,7 @@
     --text-color: #213547;
     --text-color-with-opacity: rgba(0, 0, 0, 0.5);
     --background-color: #ffffff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --button-color: #f9f9f9;
   }
 }
 
@@ -73,9 +72,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-color);
   cursor: pointer;
   transition: border-color 0.25s;
+  color: var(--text-color);
 }
 button:hover {
   border-color: var(--primary-color);
