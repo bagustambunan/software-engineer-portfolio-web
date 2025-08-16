@@ -12,7 +12,7 @@ export default function Header() {
       link: routes.projects,
     },
     {
-      name: "💬 Contact",
+      name: "💬 Contact Me",
       link: routes.contact,
     },
   ]

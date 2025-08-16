@@ -6,7 +6,7 @@ import styles from './style.module.css'
 export default function Contact() {
   return (
     <div>
-      <PageTitle title="💬 Contact" description="Get in touch with me." />
+      <PageTitle title="💬 Contact Me" description="Get in touch with me." />
       <div className={styles.linksContainer}>
         {profile.links.map((link, linkIndex) => (
           <>

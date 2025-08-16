@@ -2,7 +2,7 @@ import type { Profile, Project } from "./types";
 
 export const profile: Profile = {
   name: "@bagustambunan",
-  description: "Software Engineer",
+  description: "Software Engineer, Graphic Designer",
   photo: "images/avatar.png",
   links: [
     {
