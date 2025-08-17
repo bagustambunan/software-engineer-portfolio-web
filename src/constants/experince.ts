@@ -1,4 +1,4 @@
-import { reactStack } from "./stack";
+import { androidStack, reactStack } from "./stack";
 import type { Experience } from "./types";
 
 export const experiences: Experience[] = [
@@ -10,11 +10,11 @@ export const experiences: Experience[] = [
     details: [
       {
         descriptions: [
-          "Develop and maintain Shopee's internal applications.",
-          "Handled error reports, bug fixes, and provided on-call support.",
-          "Worked on business features and technical projects.",
-          "Collaborated with cross-functional teams.",
-          "Conduct multiple research initiatives to contribute to the team, including automating repetitive tasks, enhancing user experience, standardizing documentation, and exploring the use of new libraries."
+          "Collaborate within the Shopee Engineering Marketplace Order Frontend Team.",
+          "Maintain and enhance Shopee's internal web tools.",
+          "Handle bug reports, on-call support, and technical feature implementation.",
+          "Drive internal research projects to improve team productivity and codebase consistency.",
+          "Initiated code/UI standardization, documentation, and adoption of new libraries."
         ],
       },
     ],
@@ -22,5 +22,44 @@ export const experiences: Experience[] = [
       reactStack,
     ],
     startDate: new Date("2022-12-01"),
+  },
+  {
+    company: "Duduu Studio",
+    logo: "images/icon-company.png",
+    role: "Android Developer (Self-employed)",
+    description: "Built my own design studio team, where I served as both designer and programmer.",
+    details: [
+      {
+        descriptions: [
+          "Independently developed and published entertainment apps, reaching over 1M+ downloads.",
+          "Handled both design and programming of Android applications.",
+          "Implemented and managed AdMob monetization strategy.",
+          "Portfolio: https://play.google.com/store/apps/dev?id=4922219957373722461"
+        ],
+      },
+    ],
+    stacks: [
+      androidStack,
+    ],
+    startDate: new Date("2020-07-01"),
+    endDate: new Date("2022-02-01")
+  },
+  {
+    company: "Nutrifood",
+    logo: "images/icon-company.png",
+    role: "Application Developer Intern",
+    description: "Internship as a full-stack software engineer.",
+    details: [
+      {
+        descriptions: [
+          "Developed and maintained Nutrifood's internal applications.",
+          "Collaborated with teams to develop features for cross-departmental use."
+        ],
+      },
+    ],
+    stacks: [
+    ],
+    startDate: new Date("2021-07-01"),
+    endDate: new Date("2021-12-01")
   },
 ];
