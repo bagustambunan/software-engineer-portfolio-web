@@ -1,22 +1,31 @@
-import { useState } from "react";
+import { useState } from 'react';
 import styles from './style.module.css'
 
 export default function Tab({
   tabItems,
+  activeTab: activeTabProp,
+  onChange,
 }: {
   tabItems: {
     key: string,
     label: string,
     content: React.ReactNode,
-  }[]
+  }[],
+  activeTab?: string,
+  onChange?: (tab: string) => void,
 }) {
-  const [activeTab, setActiveTab] = useState(tabItems[0].key);
+  const [activeTab, setActiveTab] = useState(activeTabProp || tabItems[0].key);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    onChange?.(tab);
+  }
 
   return (
     <div>
       <div className={styles.tabContainer}>
         {tabItems.map((tab) => (
-          <button key={tab.key} onClick={() => setActiveTab(tab.key)} className={activeTab === tab.key ? styles.activeTab : ''}>{tab.label}</button>
+          <button key={tab.key} onClick={() => handleTabChange(tab.key)} className={activeTab === tab.key ? styles.activeTab : ''}>{tab.label}</button>
         ))}
       </div>
       <div>{tabItems.find((tab) => tab.key === activeTab)?.content}</div>

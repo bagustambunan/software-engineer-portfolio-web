@@ -2,10 +2,8 @@ export type Profile = {
   name: string;
   description: string;
   photo: string;
-  links: {
-    name: string;
-    link: string;
-  }[];
+  roles: Role[];
+  links: ProfileLink[];
 };
 
 export type Stack = {
@@ -15,8 +13,24 @@ export type Stack = {
 
 export type Project = {
   name: string;
+  role: RoleEnum;
   description: string;
   stacks?: Stack[];
   image: string;
   link: string;
 };
+
+export enum RoleEnum {
+  SOFTWARE_ENGINEER = "software-engineer",
+  GRAPHIC_DESIGNER = "graphic-designer"
+}
+
+export type Role = {
+  key: RoleEnum;
+  label: string;
+}
+
+export type ProfileLink = {
+  name: string;
+  link: string;
+}

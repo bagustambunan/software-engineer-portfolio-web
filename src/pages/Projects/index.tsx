@@ -1,38 +1,47 @@
-import { Link } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import PageTitle from '../../components/PageTitle'
-import { projects } from "../../constants"
-import styles from './style.module.css'
+import { profile } from "../../constants"
 import Tab from '../../components/Tab'
+import { useMemo } from 'react'
+import { getSearchParam, setSearchParam } from '../../utils/url'
+import ProjectList from '../../components/ProjectList'
+import { projects } from '../../constants/projects'
 
 export default function Projects() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleTabChange = (tab: string) => {
+    const newUrl = setSearchParam(location.search, "role", tab)
+    navigate(`${location.pathname}?${newUrl}`)
+  }
+
+  const activeTab = useMemo(() => {
+    const tab = getSearchParam(location.search, "role")
+    if (!tab) {
+      return profile.roles[0].key
+    }
+    if (!profile.roles.some((role) => role.key === tab)) {
+      return profile.roles[0].key
+    }
+    return tab
+  }, [location])
+
   return (
     <div>
       <PageTitle title="📝 Proud Projects" description="List of projects I'm proud of." />
-      <Tab tabItems={[{
-        key: "software-engineer",
-        label: "As a software engineer", content: <div className={styles.projectListContainer}>
-          {projects.map((project) => (
-            <div className={styles.projectContainer}>
-              <div className={styles.projectImageContainer}>
-                <img src={project.image} alt={project.name} title={project.name} />
-              </div>
-              <div className={styles.projectInfoContainer}>
-                <h2>{project.name}</h2>
-                <p>{project.description}</p>
-                <div className={styles.projectStacksContainer}>
-                  {project.stacks?.map((stack) => (
-                    <img src={stack.icon} alt={stack.name} title={stack.name} />
-                  ))}
-                </div>
-                <Link to={project.link} target="_blank">View Project ↗️</Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      }, {
-        key: "graphic-designer",
-        label: "As a graphic designer", content: <div><br />Under construction</div>
-      }]} />
+      <Tab
+        tabItems={profile.roles.map((role) =>
+        ({
+          key: role.key,
+          label: `As a ${role.label}`,
+          content: <ProjectList projects={projects.filter((project) => project.role === role.key)} />
+        }
+        )
+        )}
+        activeTab={activeTab}
+        onChange={handleTabChange}
+      />
     </div>
   )
 }
