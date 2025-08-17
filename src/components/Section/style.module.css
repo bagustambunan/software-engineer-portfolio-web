@@ -1,0 +1,6 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 16px;
+}

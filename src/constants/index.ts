@@ -33,5 +33,9 @@ export const profile: Profile = {
       name: "Medium",
       link: "https://bagustambunan.medium.com",
     },
+    {
+      name: "Resume",
+      link: "https://www.cake.me/muhammad-bagus-syahputra-tambunan",
+    },
   ],
 };
