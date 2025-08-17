@@ -11,25 +11,25 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
           <div>🚧 Under construction...</div>
         )
       }
-      {projects.map((project) => (
-        <div key={project.name} className={styles.projectContainer}>
+      {projects.map((project, projectIndex) => (
+        <div key={`project-${projectIndex}`} className={styles.projectContainer}>
           <div className={styles.projectImageContainer}>
             <img src={project.image} alt={project.name} title={project.name} />
           </div>
           <div className={styles.projectInfoContainer}>
             <h2>{project.name}</h2>
             <span>{project.description}</span>
-            {project.details?.map((detail) => (
-              <div key={detail.title}>
+            {project.details?.map((detail, detailIndex) => (
+              <div key={`project-${projectIndex}-detail-${detailIndex}`}>
                 {detail.title && <span>{detail.title}</span>}
                 <ul>
-                  {detail.descriptions.map((description) => (
-                    <li key={description}>{description}</li>
+                  {detail.descriptions.map((description, descriptionIndex) => (
+                    <li key={`project-${projectIndex}-detail-${detailIndex}-description-${descriptionIndex}`}>{description}</li>
                   ))}
                 </ul>
               </div>
             ))}
-            <StackList stacks={project.stacks || []} />
+            <StackList key={`project-${projectIndex}-stack-list`} stacks={project.stacks || []} />
             <Link to={project.link} target="_blank">View Project ↗️</Link>
           </div>
         </div>

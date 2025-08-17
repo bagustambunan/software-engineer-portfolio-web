@@ -15,22 +15,22 @@ export default function ExperiencesPage() {
           </div>
           <div className={styles.experienceInfoContainer}>
             <h3>{experience.company} - <i>{experience.role}</i></h3>
+            <i>
+              {formatDate(experience.startDate)}
+              {` - ${experience.endDate ? formatDate(experience.endDate) : 'Present'}`}
+            </i>
             <span>{experience.description}</span>
-            {experience.details?.map((detail) => (
-              <div key={detail.title}>
+            {experience.details?.map((detail, detailIndex) => (
+              <div key={`experience-${experienceIndex}-detail-${detailIndex}`}>
                 {detail.title && <span>{detail.title}</span>}
                 <ul>
-                  {detail.descriptions.map((description) => (
-                    <li key={description}>{description}</li>
+                  {detail.descriptions.map((description, descriptionIndex) => (
+                    <li key={`experience-${experienceIndex}-detail-${detailIndex}-description-${descriptionIndex}`}>{description}</li>
                   ))}
                 </ul>
               </div>
             ))}
-            <StackList stacks={experience.stacks || []} />
-            <span>
-              {formatDate(experience.startDate)}
-              {` - ${experience.endDate ? formatDate(experience.endDate) : 'Present'}`}
-            </span>
+            <StackList key={`experience-${experienceIndex}-stack-list`} stacks={experience.stacks || []} />
           </div>
         </div>
       ))}

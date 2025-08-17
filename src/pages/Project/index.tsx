@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import PageTitle from '../../components/PageTitle'
 import { profile } from "../../constants/profile"
-import Tab from '../../components/Tab'
+import Tabs from '../../components/Tabs'
 import { useMemo } from 'react'
 import { getSearchParam, setSearchParam } from '../../utils/url'
 import ProjectList from '../../components/ProjectList'
@@ -30,7 +30,8 @@ export default function ProjectPage() {
   return (
     <div>
       <PageTitle title="📝 Proud Projects" description="List of projects I'm proud of." />
-      <Tab
+      <Tabs
+        key="project-tabs"
         tabItems={profile.roles.map((role) =>
         ({
           key: role.key,
