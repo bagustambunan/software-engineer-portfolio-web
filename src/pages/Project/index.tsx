@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import PageTitle from '../../components/PageTitle'
-import { profile } from "../../constants"
+import { profile } from "../../constants/profile"
 import Tab from '../../components/Tab'
 import { useMemo } from 'react'
 import { getSearchParam, setSearchParam } from '../../utils/url'

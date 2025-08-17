@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 export type Profile = {
   name: string;
   description: string;
@@ -17,6 +15,10 @@ export type Project = {
   name: string;
   role: RoleEnum;
   description: string;
+  details?: {
+    title?: string;
+    descriptions: string[];
+  }[];
   stacks?: Stack[];
   image: string;
   link: string;
@@ -40,9 +42,14 @@ export type ProfileLink = {
 
 export type Experience = {
   company: string;
+  logo: string;
   role: string;
-  description: ReactNode;
-  stacks: Stack[];
+  description: string;
+  details?: {
+    title?: string;
+    descriptions: string[];
+  }[];
+  stacks?: Stack[];
   startDate: Date;
   endDate?: Date;
 }

@@ -1,16 +1,16 @@
-.experienceContainer {
+.stackListContainer {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.stacksContainer {
+.stackListContainer > div {
   display: flex;
   flex-direction: row;
   gap: 16px;
 }
 
-.stacksContainer > img {
+.stackListContainer > div > img {
   width: 30px;
   height: 30px;
 }

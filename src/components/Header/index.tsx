@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import routes from '../../constants/route'
-import { profile } from '../../constants'
+import { profile } from '../../constants/profile'
 import styles from './style.module.css'
 
 export default function Header() {
@@ -13,14 +13,14 @@ export default function Header() {
   }
   const links = [
     {
+      name: "Experiences",
+      icon: "💼",
+      link: routes.experiences,
+    },
+    {
       name: "Proud Projects",
       icon: "📝",
       link: routes.projects,
-    },
-    {
-      name: "Experience",
-      icon: "💼",
-      link: routes.experience,
     },
     {
       name: "Contact Me",

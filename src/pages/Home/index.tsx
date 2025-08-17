@@ -1,6 +1,6 @@
 import PageTitle from '../../components/PageTitle'
 import Section from '../../components/Section'
-import { profile } from '../../constants'
+import { profile } from '../../constants/profile'
 import styles from './style.module.css'
 
 export default function HomePage() {

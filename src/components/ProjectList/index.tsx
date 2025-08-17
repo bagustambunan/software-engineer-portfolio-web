@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import type { Project } from "../../constants/types";
+import StackList from "../StackList";
 
 export default function ProjectList({ projects }: { projects: Project[] }) {
   return (
@@ -17,12 +18,18 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
           </div>
           <div className={styles.projectInfoContainer}>
             <h2>{project.name}</h2>
-            <p>{project.description}</p>
-            <div className={styles.projectStacksContainer}>
-              {project.stacks?.map((stack) => (
-                <img src={stack.icon} alt={stack.name} title={stack.name} />
-              ))}
-            </div>
+            <span>{project.description}</span>
+            {project.details?.map((detail) => (
+              <div key={detail.title}>
+                {detail.title && <span>{detail.title}</span>}
+                <ul>
+                  {detail.descriptions.map((description) => (
+                    <li key={description}>{description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <StackList stacks={project.stacks || []} />
             <Link to={project.link} target="_blank">View Project ↗️</Link>
           </div>
         </div>

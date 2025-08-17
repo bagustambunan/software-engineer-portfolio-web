@@ -24,21 +24,6 @@
   gap: 16px;
 }
 
-.projectInfoContainer > h2 {
-  margin-bottom: -1rem;
-}
-
-.projectStacksContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-
-.projectStacksContainer > img {
-  width: 30px;
-  height: 30px;
-}
-
 @media (max-width: 600px) {
   .projectContainer {
     flex-direction: column;
