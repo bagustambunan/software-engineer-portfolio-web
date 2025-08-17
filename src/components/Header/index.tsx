@@ -6,6 +6,11 @@ import styles from './style.module.css'
 export default function Header() {
   const location = useLocation()
   const isActive = (link: string) => location.pathname === link
+  const homeLink = {
+    name: "Home",
+    icon: "🏠",
+    link: routes.home,
+  }
   const links = [
     {
       name: "Proud Projects",
@@ -39,7 +44,7 @@ export default function Header() {
         ))}
       </div>
       <div className={styles.bottomNav}>
-        {links.map((link) => (
+        {[homeLink, ...links].map((link) => (
           <div>
             {isActive(link.link) && <span>➡️</span>}
             <Link to={link.link} title={link.name} className={isActive(link.link) ? styles.active : ''}>{link.icon}</Link>

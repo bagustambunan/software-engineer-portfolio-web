@@ -14,6 +14,7 @@ export default function HomePage() {
       <Section title="About">
         <span>A software engineer with a strong foundation in frontend and mobile development, and proven experience in e-commerce and internal tooling. A fast learner who quickly adapts to new technologies, takes initiative, and solves problems proactively.</span>
       </Section>
+      <button>💾 Download my profile</button>
     </div>
   )
 }

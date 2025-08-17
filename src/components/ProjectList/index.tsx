@@ -10,13 +10,13 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
           <div>🚧 Under construction...</div>
         )
       }
-      {projects.map((project, projectIndex) => (
+      {projects.map((project) => (
         <div key={project.name} className={styles.projectContainer}>
           <div className={styles.projectImageContainer}>
             <img src={project.image} alt={project.name} title={project.name} />
           </div>
           <div className={styles.projectInfoContainer}>
-            <h2>{projectIndex + 1}&#65039;&#8419; {project.name}</h2>
+            <h2>{project.name}</h2>
             <p>{project.description}</p>
             <div className={styles.projectStacksContainer}>
               {project.stacks?.map((stack) => (
