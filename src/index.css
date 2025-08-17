@@ -52,6 +52,9 @@
   :root {
     --app-padding: 16px;
   }
+  body {
+    margin-bottom: 64px !important;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
