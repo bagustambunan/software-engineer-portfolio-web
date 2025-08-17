@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type Profile = {
   name: string;
   description: string;
@@ -34,4 +36,13 @@ export type Role = {
 export type ProfileLink = {
   name: string;
   link: string;
+}
+
+export type Experience = {
+  company: string;
+  role: string;
+  description: ReactNode;
+  stacks: Stack[];
+  startDate: Date;
+  endDate?: Date;
 }

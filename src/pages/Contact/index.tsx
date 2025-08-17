@@ -3,7 +3,7 @@ import PageTitle from "../../components/PageTitle";
 import { profile } from "../../constants";
 import styles from './style.module.css'
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <div>
       <PageTitle title="💬 Contact Me" description="Get in touch with me." />

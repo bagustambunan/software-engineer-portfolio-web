@@ -1,14 +1,5 @@
-import { type Project, RoleEnum, type Stack } from "./types";
-
-const androidStack: Stack = {
-  name: "Android",
-  icon: "images/stack-android.webp",
-};
-
-const pythonStack: Stack = {
-  name: "Python",
-  icon: "images/stack-python.png",
-};
+import { androidStack, pythonStack } from "./stack";
+import { type Project, RoleEnum } from "./types";
 
 export const projects: Project[] = [
   {

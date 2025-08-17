@@ -5,9 +5,9 @@ import Tab from '../../components/Tab'
 import { useMemo } from 'react'
 import { getSearchParam, setSearchParam } from '../../utils/url'
 import ProjectList from '../../components/ProjectList'
-import { projects } from '../../constants/projects'
+import { projects } from '../../constants/project'
 
-export default function Projects() {
+export default function ProjectPage() {
   const location = useLocation()
   const navigate = useNavigate()
 

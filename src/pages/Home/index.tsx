@@ -3,7 +3,7 @@ import Section from '../../components/Section'
 import { profile } from '../../constants'
 import styles from './style.module.css'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
       <PageTitle title="👋 Hi" />
