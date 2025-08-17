@@ -3,11 +3,11 @@
   flex-direction: row;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin: 16px 0;
 }
 
 .activeTab {
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--primary-color) !important;
   padding: 8px 16px;
   border-radius: 8px;
 }

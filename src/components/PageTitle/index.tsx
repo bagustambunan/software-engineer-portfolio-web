@@ -13,12 +13,10 @@ export default function PageTitle({
   }, [title]);
 
   return (
-    <div>
-      <h1 className={styles.pageTitle}>{title}</h1>
+    <div className={styles.pageTitleContainer}>
+      <h1>{title}</h1>
       {description && (
-        <p>
-          <i>{description}</i>
-        </p>
+        <i>{description}</i>
       )}
     </div>
   );

@@ -33,20 +33,30 @@ export default function ProjectsPage() {
         title="📝 Proud Projects"
         description="List of projects I'm proud of."
       />
-      <Tabs
-        key="project-tabs"
-        tabItems={profile.roles.map((role) => ({
-          key: role.key,
-          label: `${role.emoji} As a ${role.label}`,
-          content: (
-            <ProjectList
-              projects={projects.filter((project) => project.role === role.key)}
-            />
-          ),
-        }))}
-        activeTab={activeTab}
-        onChange={handleTabChange}
-      />
+      {profile.roles.length === 1 ? (
+        <ProjectList
+          projects={projects.filter(
+            (project) => project.role === profile.roles[0].key
+          )}
+        />
+      ) : (
+        <Tabs
+          key="project-tabs"
+          tabItems={profile.roles.map((role) => ({
+            key: role.key,
+            label: `${role.emoji} As a ${role.label}`,
+            content: (
+              <ProjectList
+                projects={projects.filter(
+                  (project) => project.role === role.key
+                )}
+              />
+            ),
+          }))}
+          activeTab={activeTab}
+          onChange={handleTabChange}
+        />
+      )}
     </div>
   );
 }

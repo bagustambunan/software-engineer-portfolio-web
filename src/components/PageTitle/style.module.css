@@ -1,3 +1,15 @@
-.pageTitle {
+.pageTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 32px;
+}
+
+.pageTitleContainer > h1 {
   font-family: 'Rosaline';
+  margin-bottom: -0.005em;
+}
+
+.pageTitleContainer > i {
+  font-size: 0.9em;
 }

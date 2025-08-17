@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./style.module.css";
+import Button from "../Button";
 
 export default function Tabs({
   key,
@@ -27,13 +28,13 @@ export default function Tabs({
     <div>
       <div className={styles.tabContainer}>
         {tabItems.map((tab, tabIndex) => (
-          <button
+          <Button
             key={`${key}-tab-${tabIndex}`}
             onClick={() => handleTabChange(tab.key)}
             className={activeTab === tab.key ? styles.activeTab : ""}
           >
             {tab.label}
-          </button>
+          </Button>
         ))}
       </div>
       <div>{tabItems.find((tab) => tab.key === activeTab)?.content}</div>

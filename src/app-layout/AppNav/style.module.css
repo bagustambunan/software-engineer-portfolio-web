@@ -16,10 +16,6 @@
   color: var(--text-color);
 }
 
-.appTitle h2 {
-  margin-bottom: -1rem;
-}
-
 .appTitle p {
   color: var(--text-color-with-opacity);
 }
