@@ -8,10 +8,12 @@ export const profile: Profile = {
     {
       key: RoleEnum.SOFTWARE_ENGINEER,
       label: "Software Engineer",
+      emoji: "👨‍💻",
     },
     {
       key: RoleEnum.GRAPHIC_DESIGNER,
       label: "Graphic Designer",
+      emoji: "🎨",
     },
   ],
   links: [

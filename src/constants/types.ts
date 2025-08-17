@@ -28,6 +28,7 @@ export enum RoleEnum {
 export type Role = {
   key: RoleEnum;
   label: string;
+  emoji: string;
 }
 
 export type ProfileLink = {

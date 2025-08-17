@@ -34,7 +34,7 @@ export default function Projects() {
         tabItems={profile.roles.map((role) =>
         ({
           key: role.key,
-          label: `As a ${role.label}`,
+          label: `${role.emoji} As a ${role.label}`,
           content: <ProjectList projects={projects.filter((project) => project.role === role.key)} />
         }
         )

@@ -40,6 +40,10 @@
   color: var(--text-color);
 }
 
+.appNav a.active:hover {
+  color: var(--primary-color-hover);
+}
+
 @media (max-width: 600px) {
   /* .appNav {
     display: none;

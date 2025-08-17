@@ -8,7 +8,7 @@
   --background-color: #242424;
   --button-color: #1a1a1a;
 
-  --app-padding: 60px;
+  --app-padding: 72px;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -39,13 +39,13 @@
 
 @media (max-width: 600px) {
   :root {
-    --app-padding: 20px;
+    --app-padding: 16px;
   }
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
   :root {
-    --app-padding: 40px;
+    --app-padding: 48px;
   }
 }
 
