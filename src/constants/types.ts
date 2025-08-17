@@ -1,9 +1,14 @@
+import type { ReactNode } from "react";
+
 export type Profile = {
   name: string;
   description: string;
   photo: string;
+  details?: {
+    title: string;
+    content: ReactNode;
+  }[];
   roles: Role[];
-  links: ProfileLink[];
 };
 
 export type Stack = {
@@ -26,19 +31,19 @@ export type Project = {
 
 export enum RoleEnum {
   SOFTWARE_ENGINEER = "software-engineer",
-  GRAPHIC_DESIGNER = "graphic-designer"
+  GRAPHIC_DESIGNER = "graphic-designer",
 }
 
 export type Role = {
   key: RoleEnum;
   label: string;
   emoji: string;
-}
+};
 
 export type ProfileLink = {
   name: string;
   link: string;
-}
+};
 
 export type Experience = {
   company: string;
@@ -52,4 +57,10 @@ export type Experience = {
   stacks?: Stack[];
   startDate: Date;
   endDate?: Date;
-}
+};
+
+export type Navigation = {
+  name: string;
+  icon: string;
+  link: string;
+};

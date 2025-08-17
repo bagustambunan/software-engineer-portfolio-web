@@ -1,25 +1,41 @@
-import { StrictMode } from 'react'
+import { lazy, StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
-import Layout from './layout'
-import HomePage from './pages/Home/index.tsx'
-import ProjectPage from './pages/Project/index.tsx'
-import ContactPage from './pages/Contact/index.tsx'
-import routes from './constants/route.ts'
-import ExperiencesPage from './pages/Experiences/index.tsx'
+import routes from './constants/route'
+import Layout from './app-layout/Layout'
+
+const HomePage = lazy(() => import('./pages/Home'))
+const ProjectPage = lazy(() => import('./pages/Projects'))
+const ContactPage = lazy(() => import('./pages/Contact'))
+const ExperiencesPage = lazy(() => import('./pages/Experiences'))
+
+const LoadingFallback = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%',
+    fontSize: '18px'
+  }}>
+    Loading...
+  </div>
+)
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path={routes.projects} element={<ProjectPage />} />
-          <Route path={routes.experiences} element={<ExperiencesPage />} />
-          <Route path={routes.contact} element={<ContactPage />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path={routes.projects} element={<ProjectPage />} />
+            <Route path={routes.experiences} element={<ExperiencesPage />} />
+            <Route path={routes.contact} element={<ContactPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   </StrictMode>,
 )

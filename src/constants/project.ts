@@ -5,7 +5,8 @@ const softwareEngineerProjects: Project[] = [
   {
     name: "Oh My Bear Cute Stickers",
     role: RoleEnum.SOFTWARE_ENGINEER,
-    description: "An Android app to get collection of cute stickers created by me.",
+    description:
+      "An Android app to get collection of cute stickers created by me.",
     image: "images/project-oh-my-bear.png",
     link: "https://play.google.com/store/apps/details?id=com.DuduuStudio.BearSticker",
     details: [
@@ -14,9 +15,7 @@ const softwareEngineerProjects: Project[] = [
         descriptions: ["This app reached 1M+ downloads on Google Play Store."],
       },
     ],
-    stacks: [
-      androidStack
-    ],
+    stacks: [androidStack],
   },
   {
     name: "Oh My Bear Cute Stickers (iOS)",
@@ -29,7 +28,8 @@ const softwareEngineerProjects: Project[] = [
   {
     name: "SIGAP COVID-19 LINE Chatbot",
     role: RoleEnum.SOFTWARE_ENGINEER,
-    description: "SIGAP COVID-19 is a chatbot that answers questions about Covid-19 in Indonesia.",
+    description:
+      "SIGAP COVID-19 is a chatbot that answers questions about Covid-19 in Indonesia.",
     details: [
       {
         title: "Achievements:",
@@ -38,11 +38,9 @@ const softwareEngineerProjects: Project[] = [
     ],
     image: "images/project-sigap.png",
     link: "https://page.line.me/?accountId=897pjzic",
-    stacks: [
-      pythonStack
-    ],
-  }
-]
+    stacks: [pythonStack],
+  },
+];
 
 const graphicDesignerProjects: Project[] = [
   {
@@ -52,7 +50,9 @@ const graphicDesignerProjects: Project[] = [
     details: [
       {
         title: "Achievements:",
-        descriptions: ["This sticker set won MVP on LINE Creators Market for achieving the highest sales in September 2018."],
+        descriptions: [
+          "This sticker set won MVP on LINE Creators Market for achieving the highest sales in September 2018.",
+        ],
       },
     ],
     image: "images/project-duduu-2.png",
@@ -65,7 +65,9 @@ const graphicDesignerProjects: Project[] = [
     details: [
       {
         title: "Fun facts:",
-        descriptions: ['This sticker was made at the request of LINE because the previous sticker "Cute Duduu 2" won MVP.'],
+        descriptions: [
+          'This sticker was made at the request of LINE because the previous sticker "Cute Duduu 2" won MVP.',
+        ],
       },
     ],
     image: "images/project-duduu-3.png",
@@ -78,7 +80,9 @@ const graphicDesignerProjects: Project[] = [
     details: [
       {
         title: "Achievements:",
-        descriptions: ["This sticker set won 2nd Place in LINE Creators Competition (Student Sticker Category). Read: https://kumparan.com/kumparantech/selamat-ini-dia-daftar-pemenang-line-creator-competition-1537943693286714133/2"],
+        descriptions: [
+          "This sticker set won 2nd Place in LINE Creators Competition (Student Sticker Category). Read: https://kumparan.com/kumparantech/selamat-ini-dia-daftar-pemenang-line-creator-competition-1537943693286714133/2",
+        ],
       },
     ],
     image: "images/project-panda.png",
@@ -87,10 +91,14 @@ const graphicDesignerProjects: Project[] = [
   {
     name: "Puspiptek Logo",
     role: RoleEnum.GRAPHIC_DESIGNER,
-    description: "Participated in the Puspiptek logo creation competition. Won 2nd place.",
+    description:
+      "Participated in the Puspiptek logo creation competition. Won 2nd place.",
     image: "images/project-puspiptek.jpg",
     link: "",
   },
-]
+];
 
-export const projects: Project[] = [...softwareEngineerProjects, ...graphicDesignerProjects];
+export const projects: Project[] = [
+  ...softwareEngineerProjects,
+  ...graphicDesignerProjects,
+];

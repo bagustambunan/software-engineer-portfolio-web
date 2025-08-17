@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
-import { profile } from "../../constants/profile";
-import styles from './style.module.css'
+import styles from "./style.module.css";
+import Empty from "../../components/Empty";
+import { contacts } from "../../constants/contact";
+import { Fragment } from "react";
 
 export default function ContactPage() {
   return (
     <div>
       <PageTitle title="💬 Contact Me" description="Get in touch with me." />
       <div className={styles.linksContainer}>
-        {profile.links.map((link, linkIndex) => (
-          <>
-            <Link to={link.link} target="_blank">
-              {link.name}
+        {contacts.length === 0 && <Empty />}
+        {contacts.map((contact, contactIndex) => (
+          <Fragment key={`contact-${contactIndex}`}>
+            <Link to={contact.link} target="_blank">
+              {contact.name}
             </Link>
-            {linkIndex < profile.links.length - 1 && <span className={styles.linkSeparator}>•</span>}
-          </>
+            {contactIndex < contacts.length - 1 && (
+              <span className={styles.linkSeparator}>•</span>
+            )}
+          </Fragment>
         ))}
       </div>
     </div>
-  )
+  );
 }
