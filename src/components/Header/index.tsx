@@ -8,15 +8,18 @@ export default function Header() {
   const isActive = (link: string) => location.pathname === link
   const links = [
     {
-      name: "📝 Proud Projects",
+      name: "Proud Projects",
+      icon: "📝",
       link: routes.projects,
     },
     {
-      name: "💼 Experience",
+      name: "Experience",
+      icon: "💼",
       link: routes.experience,
     },
     {
-      name: "💬 Contact Me",
+      name: "Contact Me",
+      icon: "💬",
       link: routes.contact,
     },
   ]
@@ -27,11 +30,19 @@ export default function Header() {
           <h2>{profile.name}</h2>
           <p>{profile.description}</p>
         </div></Link>
-      <div className={styles.appNav}>
+      <div className={styles.topNav}>
         {links.map((link) => (
           <div>
             {isActive(link.link) && <span>➡️</span>}
-            <Link to={link.link} className={isActive(link.link) ? styles.active : ''}>{link.name}</Link>
+            <Link to={link.link} title={link.name} className={isActive(link.link) ? styles.active : ''}>{link.icon} {link.name}</Link>
+          </div>
+        ))}
+      </div>
+      <div className={styles.bottomNav}>
+        {links.map((link) => (
+          <div>
+            {isActive(link.link) && <span>➡️</span>}
+            <Link to={link.link} title={link.name} className={isActive(link.link) ? styles.active : ''}>{link.icon}</Link>
           </div>
         ))}
       </div>

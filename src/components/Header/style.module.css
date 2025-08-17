@@ -24,32 +24,48 @@
   color: var(--text-color-with-opacity);
 }
 
-.appNav {
+.topNav {
   display: flex;
   flex-direction: row;
   gap: 16px;
 }
 
-.appNav div {
+.topNav div {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
 
-.appNav a.active {
+.topNav a.active {
   color: var(--text-color);
 }
 
-.appNav a.active:hover {
+.topNav a.active:hover {
   color: var(--primary-color-hover);
 }
 
+.bottomNav {
+  display: none;
+}
+
 @media (max-width: 600px) {
-  /* .appNav {
+  .topNav {
     display: none;
-  } */
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .bottomNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 16px;
+    border-top: 1px solid var(--text-color-with-opacity);
+    z-index: 1000;
   }
 }
