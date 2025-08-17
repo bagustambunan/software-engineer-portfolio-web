@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import styles from "./style.module.css";
 
 export default function PageTitle({ title, description }: { title: string, description?: string }) {
   useEffect(() => {
@@ -7,7 +8,7 @@ export default function PageTitle({ title, description }: { title: string, descr
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className={styles.pageTitle}>{title}</h1>
       {description && <p><i>{description}</i></p>}
     </div>
   )
