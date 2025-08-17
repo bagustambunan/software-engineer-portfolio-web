@@ -1,7 +1,7 @@
 import { androidStack, pythonStack } from "./stack";
 import { type Project, RoleEnum } from "./types";
 
-export const projects: Project[] = [
+const softwareEngineerProjects: Project[] = [
   {
     name: "Oh My Bear Cute Stickers",
     role: RoleEnum.SOFTWARE_ENGINEER,
@@ -42,4 +42,55 @@ export const projects: Project[] = [
       pythonStack
     ],
   }
-];
+]
+
+const graphicDesignerProjects: Project[] = [
+  {
+    name: "Cute Duduu 2",
+    role: RoleEnum.GRAPHIC_DESIGNER,
+    description: "Animated stickers for LINE.",
+    details: [
+      {
+        title: "Achievements:",
+        descriptions: ["This sticker set won MVP on LINE Creators Market for achieving the highest sales in September 2018."],
+      },
+    ],
+    image: "images/project-duduu-2.png",
+    link: "https://store.line.me/stickershop/product/4508178/en",
+  },
+  {
+    name: "Cute Duduu: Cari Perhatian",
+    role: RoleEnum.GRAPHIC_DESIGNER,
+    description: "Create sound animated stickers for LINE Store Official.",
+    details: [
+      {
+        title: "Fun facts:",
+        descriptions: ['This sticker was made at the request of LINE because the previous sticker "Cute Duduu 2" won MVP.'],
+      },
+    ],
+    image: "images/project-duduu-3.png",
+    link: "https://store.line.me/stickershop/product/14090/en",
+  },
+  {
+    name: "Oh My Panda",
+    role: RoleEnum.GRAPHIC_DESIGNER,
+    description: "Animated stickers for LINE.",
+    details: [
+      {
+        title: "Achievements:",
+        descriptions: ["This sticker set won 2nd Place in LINE Creators Competition (Student Sticker Category). Read: https://kumparan.com/kumparantech/selamat-ini-dia-daftar-pemenang-line-creator-competition-1537943693286714133/2"],
+      },
+    ],
+    image: "images/project-panda.png",
+    link: "https://store.line.me/stickershop/product/3836373/en",
+  },
+  {
+    name: "Puspiptek Logo",
+    role: RoleEnum.GRAPHIC_DESIGNER,
+    description: "Participated in the Puspiptek logo creation competition. Won 2nd place.",
+    image: "images/project-puspiptek.jpg",
+    link: "",
+  },
+]
+
+export const projects: Project[] = [...softwareEngineerProjects, ...graphicDesignerProjects];
