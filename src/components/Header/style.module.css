@@ -30,15 +30,14 @@
   gap: 16px;
 }
 
-.appNav a {
-  border-radius: 8px;
-  padding: 8px 0px;
+.appNav div {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }
 
-.appNav a.activeLink {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  padding: 8px 16px;
+.appNav a.active {
+  color: var(--text-color);
 }
 
 @media (max-width: 600px) {

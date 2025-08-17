@@ -25,7 +25,10 @@ export default function Header() {
         </div></Link>
       <div className={styles.appNav}>
         {links.map((link) => (
-          <Link to={link.link} className={isActive(link.link) ? styles.activeLink : ''}>{link.name}</Link>
+          <div>
+            {isActive(link.link) && <span>➡️</span>}
+            <Link to={link.link} className={isActive(link.link) ? styles.active : ''}>{link.name}</Link>
+          </div>
         ))}
       </div>
     </header>
