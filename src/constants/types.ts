@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 
 export type Profile = {
   name: string;
-  description: string;
+  shortDescription: string;
+  longDescription: string;
   photo: string;
   details?: {
     title: string;
@@ -40,7 +41,7 @@ export type Role = {
   emoji: string;
 };
 
-export type ProfileLink = {
+export type Contact = {
   name: string;
   link: string;
 };

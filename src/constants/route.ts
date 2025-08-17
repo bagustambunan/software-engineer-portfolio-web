@@ -3,6 +3,7 @@ const routes = {
   projects: "/projects",
   experiences: "/experiences",
   contact: "/contact",
+  resume: "/resume",
 };
 
 export default routes;

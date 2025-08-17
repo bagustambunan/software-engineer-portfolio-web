@@ -9,6 +9,7 @@ const HomePage = lazy(() => import('./pages/Home'))
 const ProjectPage = lazy(() => import('./pages/Projects'))
 const ContactPage = lazy(() => import('./pages/Contact'))
 const ExperiencesPage = lazy(() => import('./pages/Experiences'))
+const ResumePage = lazy(() => import('./pages/Resume'))
 
 const LoadingFallback = () => (
   <div style={{
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
+          <Route path={routes.resume} element={<ResumePage />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path={routes.projects} element={<ProjectPage />} />

@@ -12,7 +12,7 @@ export default function AppNav() {
       <Link to="/">
         <div className={styles.appTitle}>
           <h2>{profile.name}</h2>
-          <p>{profile.description}</p>
+          <p>{profile.shortDescription}</p>
         </div>
       </Link>
       <div className={styles.topNav}>
