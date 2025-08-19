@@ -7,8 +7,9 @@ import PageTitle from "../../components/PageTitle";
 import ProjectList from "../../components/ProjectList";
 import { projects } from "../../constants/project";
 import styles from "./style.module.css";
-import ContactList from "../../components/ContactList";
-import { contacts } from "../../constants/contact";
+import LinkList from "../../components/LinkList";
+import { links } from "../../constants/link";
+import { LinkType } from "../../constants/types";
 
 export default function ResumePage() {
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function ResumePage() {
         />
         <span>{profile.longDescription}</span>
         <br /><br />
-        <ContactList contacts={contacts} />
+        <LinkList links={links.filter((link) => link.type === LinkType.CONTACT)} />
       </div>
       <br />
       <Section title="Experiences">

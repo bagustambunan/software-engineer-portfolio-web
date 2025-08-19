@@ -41,8 +41,14 @@ export type Role = {
   emoji: string;
 };
 
-export type Contact = {
+export enum LinkType {
+  CONTACT = "contact",
+  OTHER = "other",
+}
+
+export type Link = {
   name: string;
+  type: LinkType;
   link: string;
 };
 
