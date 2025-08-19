@@ -19,6 +19,12 @@ const projectsNavigation: Navigation = {
   link: routes.projects,
 };
 
+const achievementsNavigation: Navigation = {
+  name: "Achievements",
+  icon: "🏆",
+  link: routes.achievements,
+};
+
 const contactNavigation: Navigation = {
   name: "Contact Me",
   icon: "💬",
@@ -28,6 +34,7 @@ const contactNavigation: Navigation = {
 export const topNavigations: Navigation[] = [
   experiencesNavigation,
   projectsNavigation,
+  achievementsNavigation,
   contactNavigation,
 ];
 
@@ -35,5 +42,6 @@ export const bottomNavigations: Navigation[] = [
   homeNavigation,
   experiencesNavigation,
   projectsNavigation,
+  achievementsNavigation,
   contactNavigation,
 ];

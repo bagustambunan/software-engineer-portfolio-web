@@ -6,9 +6,10 @@ import routes from './constants/route'
 import Layout from './app-layout/Layout'
 
 const HomePage = lazy(() => import('./pages/Home'))
-const ProjectPage = lazy(() => import('./pages/Projects'))
-const ContactPage = lazy(() => import('./pages/Contact'))
 const ExperiencesPage = lazy(() => import('./pages/Experiences'))
+const ProjectPage = lazy(() => import('./pages/Projects'))
+const AchievementsPage = lazy(() => import('./pages/Achievements'))
+const ContactPage = lazy(() => import('./pages/Contact'))
 const ResumePage = lazy(() => import('./pages/Resume'))
 
 const LoadingFallback = () => (
@@ -34,6 +35,7 @@ createRoot(document.getElementById('root')!).render(
             <Route index element={<HomePage />} />
             <Route path={routes.projects} element={<ProjectPage />} />
             <Route path={routes.experiences} element={<ExperiencesPage />} />
+            <Route path={routes.achievements} element={<AchievementsPage />} />
             <Route path={routes.contact} element={<ContactPage />} />
           </Route>
         </Routes>
