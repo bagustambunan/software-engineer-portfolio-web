@@ -53,9 +53,10 @@ export type Link = {
 };
 
 export type Experience = {
+  role: RoleEnum;
   company: string;
   logo: string;
-  role: string;
+  position: string;
   description: string;
   details?: {
     title?: string;

@@ -11,6 +11,7 @@ export default function StackList({
   if (stacks.length === 0) {
     return null;
   }
+  return <div>Tech Stacks: {stacks.map((stack) => stack.name).join(", ")}</div>
   return (
     <div className={styles.stackListContainer}>
       <div>

@@ -28,7 +28,7 @@ export default function ExperienceList({
           </div>
           <div className={styles.experienceInfoContainer}>
             <h3>
-              {experience.company} - <i>{experience.role}</i>
+              {experience.company} - <i>{experience.position}</i>
             </h3>
             <i>
               {formatDate(experience.startDate)}
