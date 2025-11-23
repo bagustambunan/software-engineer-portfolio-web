@@ -72,3 +72,9 @@ export type Navigation = {
   icon: string;
   link: string;
 };
+
+export type OpenSourceContribution = {
+  title: string;
+  description: string;
+  link: string;
+};
