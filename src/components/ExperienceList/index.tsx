@@ -36,7 +36,7 @@ export default function ExperienceList({
                 experience.endDate ? formatDate(experience.endDate) : "Present"
               }`}
             </i>
-            <span>{experience.description}</span>
+            {experience.description && <span>{experience.description}</span>}
             {experience.details?.map((detail, detailIndex) => (
               <div key={`experience-${experienceIndex}-detail-${detailIndex}`}>
                 {detail.title && <span>{detail.title}</span>}

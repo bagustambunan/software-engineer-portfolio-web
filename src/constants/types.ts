@@ -57,7 +57,7 @@ export type Experience = {
   company: string;
   logo: string;
   position: string;
-  description: string;
+  description?: string;
   details?: {
     title?: string;
     descriptions: string[];
