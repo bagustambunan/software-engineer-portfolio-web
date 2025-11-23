@@ -5,18 +5,14 @@ import Section from "../../components/Section";
 import { profile } from "../../constants/profile";
 import routes from "../../constants/route";
 import styles from "./style.module.css";
+import Avatar from "../../components/Avatar";
 
 export default function HomePage() {
   const navigate = useNavigate();
   return (
     <div className={styles.homeContainer}>
       <PageTitle title="👋 Hi" />
-      <img
-        src={profile.photo}
-        alt={profile.name}
-        title={profile.name}
-        className={styles.avatar}
-      />
+      <Avatar />
       <Section title="Name">
         <p>{profile.name}</p>
       </Section>

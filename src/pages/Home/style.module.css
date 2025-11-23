@@ -1,9 +1,3 @@
-.avatar {
-  width: 200px;
-  border-radius: 20%;
-  object-fit: cover;
-}
-
 .homeContainer {
   display: flex;
   flex-direction: column;

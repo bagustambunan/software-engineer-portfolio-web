@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import routes from "./constants/route";
 import Layout from "./app-layout/Layout";
-import { profile } from "./constants/profile";
+import Avatar from "./components/Avatar";
 
 const HomePage = lazy(() => import("./pages/Home"));
 const ExperiencesPage = lazy(() => import("./pages/Experiences"));
@@ -13,32 +13,10 @@ const AchievementsPage = lazy(() => import("./pages/Achievements"));
 const ContactPage = lazy(() => import("./pages/Contact"));
 const ResumePage = lazy(() => import("./pages/Resume"));
 
-const LoadingFallback = () => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100%",
-      width: "100%",
-    }}
-  >
-    <img
-      src={profile.photo}
-      alt={profile.name}
-      title={profile.name}
-      style={{
-        width: "80px",
-        height: "80px",
-      }}
-    />
-  </div>
-);
-
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<LoadingFallback />}>
+      <Suspense fallback={<Avatar />}>
         <Routes>
           <Route path={routes.resume} element={<ResumePage />} />
           <Route path="/" element={<Layout />}>
