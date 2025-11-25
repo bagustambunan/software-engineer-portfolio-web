@@ -1,3 +1,9 @@
+.postListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .postContainer {
   display: flex;
   flex-direction: row;
