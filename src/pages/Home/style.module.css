@@ -3,3 +3,9 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.highlightContainer {
+  padding: var(--carousel-padding);
+  background-color: var(--carousel-background-color);
+  border-radius: 8px;
+}

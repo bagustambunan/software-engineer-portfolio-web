@@ -28,6 +28,7 @@ export type Project = {
   stacks?: Stack[];
   image: string;
   link: string;
+  highlighted?: boolean;
 };
 
 export enum RoleEnum {
@@ -65,6 +66,7 @@ export type Experience = {
   stacks?: Stack[];
   startDate: Date;
   endDate?: Date;
+  highlighted?: boolean;
 };
 
 export type Navigation = {

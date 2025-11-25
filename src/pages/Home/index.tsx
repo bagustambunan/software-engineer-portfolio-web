@@ -6,6 +6,8 @@ import { profile } from "../../constants/profile";
 import routes from "../../constants/route";
 import styles from "./style.module.css";
 import Avatar from "../../components/Avatar";
+import { experiences } from "../../constants/experince";
+import ExperienceList from "../../components/ExperienceList";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -13,10 +15,8 @@ export default function HomePage() {
     <div className={styles.homeContainer}>
       <PageTitle title="👋 Hi" />
       <Avatar />
-      <Section title="Name">
-        <p>{profile.name}</p>
-      </Section>
-      <Section title="About">
+      <Section>
+        <p>I'm {profile.name}</p>
         <p>{profile.longDescription}</p>
       </Section>
       {profile.details?.map((detail, detailIndex) => (
@@ -24,6 +24,16 @@ export default function HomePage() {
           {detail.content}
         </Section>
       ))}
+      <Section title="💼 Highlighted Experiences">
+        <div className={styles.highlightContainer}>
+          <ExperienceList
+            carousel
+            experiences={experiences.filter(
+              (experience) => experience.highlighted
+            )}
+          />
+        </div>
+      </Section>
       <div>
         <Button
           onClick={() => {

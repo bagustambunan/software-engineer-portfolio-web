@@ -45,6 +45,7 @@ export const experiences: Experience[] = [
       playwrightStack,
     ],
     startDate: new Date("2022-12-01"),
+    highlighted: true,
   },
   {
     role: RoleEnum.SOFTWARE_ENGINEER,
@@ -77,6 +78,7 @@ export const experiences: Experience[] = [
     stacks: [androidStack, javaStack],
     startDate: new Date("2020-07-01"),
     endDate: new Date("2022-02-01"),
+    highlighted: true,
   },
   {
     role: RoleEnum.SOFTWARE_ENGINEER,
