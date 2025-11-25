@@ -14,7 +14,7 @@ export default function OpenSourceContributionList({ contributions }: { contribu
           key={`contribution-${contributionIndex}`}
           className={styles.openSourceContributionContainer}
         >
-          <h2>{contribution.title}</h2>
+          <h3>{contribution.title}</h3>
           <span>{contribution.description}</span>
           <Link to={contribution.link} target="_blank">
             View Contribution ↗️

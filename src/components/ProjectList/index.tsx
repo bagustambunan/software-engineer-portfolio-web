@@ -19,7 +19,7 @@ const ProjectItem = ({
         <img src={project.image} alt={project.name} title={project.name} />
       </div>
       <div className={styles.projectInfoContainer}>
-        <h2>{project.name}</h2>
+        <h3>{project.name}</h3>
         <span>{project.description}</span>
         {project.details?.map((detail, detailIndex) => (
           <div key={`project-${projectIndex}-detail-${detailIndex}`}>
