@@ -80,3 +80,12 @@ export type OpenSourceContribution = {
   description: string;
   link: string;
 };
+
+export type Post = {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  tags: string[];
+  date: Date;
+};

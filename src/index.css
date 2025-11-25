@@ -49,6 +49,8 @@
     --text-color-with-opacity: rgba(0, 0, 0, 0.5);
     --background-color: #ffffff;
     --button-color: #f9f9f9;
+
+    --carousel-background-color: rgba(0, 0, 0, 0.03);
   }
 }
 

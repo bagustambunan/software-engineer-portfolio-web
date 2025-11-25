@@ -1,0 +1,18 @@
+.postContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.postContainer > div:first-child > img {
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.postContainer > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

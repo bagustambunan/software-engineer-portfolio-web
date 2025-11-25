@@ -30,20 +30,22 @@ export default function Carousel({ items, extra }: CarouselProps) {
       ))}
       <div className={styles.carouselFooter}>
         {extra && <div className={styles.carouselExtraContainer}>{extra}</div>}
-        <div className={styles.carouselActionContainer}>
-          <Button
-            onClick={handlePrevious}
-            className={styles.carouselPreviousButton}
-          >
-            {`<`}
-          </Button>
-          <span>
-            {currentIndex + 1} / {items.length}
-          </span>
-          <Button onClick={handleNext} className={styles.carouselNextButton}>
-            {`>`}
-          </Button>
-        </div>
+        {items.length > 1 && (
+          <div className={styles.carouselActionContainer}>
+            <Button
+              onClick={handlePrevious}
+              className={styles.carouselPreviousButton}
+            >
+              {`<`}
+            </Button>
+            <span>
+              {currentIndex + 1} / {items.length}
+            </span>
+            <Button onClick={handleNext} className={styles.carouselNextButton}>
+              {`>`}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

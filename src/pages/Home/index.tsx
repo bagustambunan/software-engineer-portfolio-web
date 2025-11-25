@@ -10,6 +10,8 @@ import { experiences } from "../../constants/experince";
 import ExperienceList from "../../components/ExperienceList";
 import ProjectList from "../../components/ProjectList";
 import { projects } from "../../constants/project";
+import { posts } from "../../constants/post";
+import PostList from "../../components/PostList";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -35,6 +37,11 @@ export default function HomePage() {
           >
             💾 Download my profile
           </Button>
+        </div>
+      </Section>
+      <Section title="✍️ Writings">
+        <div className={styles.highlightContainer}>
+          <PostList posts={posts} />
         </div>
       </Section>
       <Section title="💼 Highlighted Experiences">
