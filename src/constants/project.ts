@@ -16,6 +16,7 @@ const softwareEngineerProjects: Project[] = [
       },
     ],
     stacks: [androidStack],
+    highlighted: true,
   },
   {
     name: "Oh My Bear Cute Stickers (iOS)",
@@ -24,6 +25,7 @@ const softwareEngineerProjects: Project[] = [
     image: "images/project-oh-my-bear.png",
     link: "",
     stacks: [],
+    highlighted: true,
   },
   {
     name: "SIGAP COVID-19 LINE Chatbot",
@@ -39,6 +41,7 @@ const softwareEngineerProjects: Project[] = [
     image: "images/project-sigap.png",
     link: "https://page.line.me/?accountId=897pjzic",
     stacks: [pythonStack],
+    highlighted: true,
   },
 ];
 

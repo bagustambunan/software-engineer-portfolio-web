@@ -8,6 +8,8 @@ import styles from "./style.module.css";
 import Avatar from "../../components/Avatar";
 import { experiences } from "../../constants/experince";
 import ExperienceList from "../../components/ExperienceList";
+import ProjectList from "../../components/ProjectList";
+import { projects } from "../../constants/project";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -24,6 +26,17 @@ export default function HomePage() {
           {detail.content}
         </Section>
       ))}
+      <Section>
+        <div>
+          <Button
+            onClick={() => {
+              navigate(routes.resume);
+            }}
+          >
+            💾 Download my profile
+          </Button>
+        </div>
+      </Section>
       <Section title="💼 Highlighted Experiences">
         <div className={styles.highlightContainer}>
           <ExperienceList
@@ -34,15 +47,14 @@ export default function HomePage() {
           />
         </div>
       </Section>
-      <div>
-        <Button
-          onClick={() => {
-            navigate(routes.resume);
-          }}
-        >
-          💾 Download my profile
-        </Button>
-      </div>
+      <Section title="📝 Highlighted Projects">
+        <div className={styles.highlightContainer}>
+          <ProjectList
+            carousel
+            projects={projects.filter((project) => project.highlighted)}
+          />
+        </div>
+      </Section>
     </div>
   );
 }
