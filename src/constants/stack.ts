@@ -84,3 +84,13 @@ export const cStack: Stack = {
   name: "C Programming Language",
   icon: "images/stack-c.png",
 };
+
+export const swiftStack: Stack = {
+  name: "Swift",
+  icon: "images/stack-swift.png",
+};
+
+export const swiftUiStack: Stack = {
+  name: "SwiftUI",
+  icon: "images/stack-swiftui.png",
+};

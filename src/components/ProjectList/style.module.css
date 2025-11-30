@@ -30,3 +30,16 @@
     flex-direction: column;
   }
 }
+
+.imageListContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.imageItem {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10%;
+}

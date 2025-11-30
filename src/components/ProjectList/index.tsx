@@ -39,6 +39,15 @@ const ProjectItem = ({
           key={`project-${projectIndex}-stack-list`}
           stacks={project.stacks || []}
         />
+        {project.image_list ? (
+          <div className={styles.imageListContainer}>
+            {project.image_list?.map((image, imageIndex) => (
+              <div key={`project-${projectIndex}-image-${imageIndex}`}>
+                <img src={image.url} alt={image.title} title={image.title} className={styles.imageItem} />
+              </div>
+            ))}
+          </div>
+        ) : null}
         <Link to={project.link} target="_blank">
           View Project ↗️
         </Link>
@@ -61,7 +70,11 @@ export default function ProjectList({
     return (
       <Carousel
         items={projects.map((project, projectIndex) => (
-          <ProjectItem key={`project-${projectIndex}`} project={project} projectIndex={projectIndex} />
+          <ProjectItem
+            key={`project-${projectIndex}`}
+            project={project}
+            projectIndex={projectIndex}
+          />
         ))}
         extra={<Link to={routes.projects}>View All Projects ↗️</Link>}
       />

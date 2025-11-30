@@ -41,7 +41,7 @@ export default function HomePage() {
       </Section>
       <Section title="✍️ Writings" level={2}>
         <div className={styles.highlightContainer}>
-          <PostList posts={posts} />
+          <PostList carousel posts={posts} />
         </div>
       </Section>
       <Section title="💼 Highlighted Experiences" level={2}>

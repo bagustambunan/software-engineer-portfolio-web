@@ -28,6 +28,10 @@ export type Project = {
   stacks?: Stack[];
   image: string;
   link: string;
+  image_list?: {
+    title?: string;
+    url: string;
+  }[];
   highlighted?: boolean;
 };
 
