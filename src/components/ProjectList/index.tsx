@@ -5,13 +5,36 @@ import StackList from "../StackList";
 import Empty from "../Empty";
 import Carousel from "../Carousel";
 import routes from "../../constants/route";
+import { useState } from "react";
+
+type ProjectImage = {
+  url: string;
+  title?: string;
+};
+
+const PreviewImage = ({
+  image,
+  onDismiss,
+}: {
+  image: ProjectImage;
+  onDismiss: () => void;
+}) => {
+  return (
+    <div className={styles.previewImageContainer} onClick={onDismiss}>
+      <h2>{image.title}</h2>
+      <img src={image.url} alt={image.title} title={image.title} />
+    </div>
+  );
+};
 
 const ProjectItem = ({
   project,
   projectIndex,
+  setPreviewImage,
 }: {
   project: Project;
   projectIndex: number;
+  setPreviewImage: (image: ProjectImage) => void;
 }) => {
   return (
     <div key={`project-${projectIndex}`} className={styles.projectContainer}>
@@ -43,7 +66,15 @@ const ProjectItem = ({
           <div className={styles.imageListContainer}>
             {project.image_list?.map((image, imageIndex) => (
               <div key={`project-${projectIndex}-image-${imageIndex}`}>
-                <img src={image.url} alt={image.title} title={image.title} className={styles.imageItem} />
+                <img
+                  src={image.url}
+                  alt={image.title}
+                  title={image.title}
+                  className={styles.imageItem}
+                  onClick={() =>
+                    setPreviewImage({ url: image.url, title: image.title })
+                  }
+                />
               </div>
             ))}
           </div>
@@ -63,32 +94,45 @@ export default function ProjectList({
   projects?: Project[];
   carousel?: boolean;
 }) {
+  const [previewImage, setPreviewImage] = useState<{
+    url: string;
+    title?: string;
+  } | null>(null);
   if (!projects || projects.length === 0) {
     return <Empty />;
   }
-  if (carousel) {
-    return (
-      <Carousel
-        items={projects.map((project, projectIndex) => (
-          <ProjectItem
-            key={`project-${projectIndex}`}
-            project={project}
-            projectIndex={projectIndex}
-          />
-        ))}
-        extra={<Link to={routes.projects}>View All Projects ↗️</Link>}
-      />
-    );
-  }
   return (
-    <div className={styles.projectListContainer}>
-      {projects.map((project, projectIndex) => (
-        <ProjectItem
-          key={`project-${projectIndex}`}
-          project={project}
-          projectIndex={projectIndex}
+    <>
+      {carousel ? (
+        <Carousel
+          items={projects.map((project, projectIndex) => (
+            <ProjectItem
+              key={`project-${projectIndex}`}
+              project={project}
+              projectIndex={projectIndex}
+              setPreviewImage={setPreviewImage}
+            />
+          ))}
+          extra={<Link to={routes.projects}>View All Projects ↗️</Link>}
         />
-      ))}
-    </div>
+      ) : (
+        <div className={styles.projectListContainer}>
+          {projects.map((project, projectIndex) => (
+            <ProjectItem
+              key={`project-${projectIndex}`}
+              project={project}
+              projectIndex={projectIndex}
+              setPreviewImage={setPreviewImage}
+            />
+          ))}
+        </div>
+      )}
+      {previewImage ? (
+        <PreviewImage
+          image={previewImage}
+          onDismiss={() => setPreviewImage(null)}
+        />
+      ) : null}
+    </>
   );
 }
