@@ -1,5 +1,7 @@
-import Empty from "../../components/Empty";
+import OpenSourceContributionList from "../../components/OpenSourceContributionList";
 import PageTitle from "../../components/PageTitle";
+import Tabs from "../../components/Tabs";
+import { openSourceContributions } from "../../constants/openSouceContribution";
 
 export default function AchievementsPage() {
   return (
@@ -8,7 +10,21 @@ export default function AchievementsPage() {
         title="🏆 Achievements"
         description="List of achievements I've achieved."
       />
-      <Empty />
+      <Tabs
+        key="project-tabs"
+        tabItems={[
+          {
+            key: "open-source-contributions",
+            label: "🌐 Open Source Contributions",
+            content: (
+              <OpenSourceContributionList
+                contributions={openSourceContributions}
+              />
+            ),
+          },
+        ]}
+        activeTab="open-source-contributions"
+      />
     </div>
   );
 }

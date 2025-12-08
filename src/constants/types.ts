@@ -28,6 +28,11 @@ export type Project = {
   stacks?: Stack[];
   image: string;
   link: string;
+  image_list?: {
+    title?: string;
+    url: string;
+  }[];
+  highlighted?: boolean;
 };
 
 export enum RoleEnum {
@@ -57,7 +62,7 @@ export type Experience = {
   company: string;
   logo: string;
   position: string;
-  description: string;
+  description?: string;
   details?: {
     title?: string;
     descriptions: string[];
@@ -65,10 +70,26 @@ export type Experience = {
   stacks?: Stack[];
   startDate: Date;
   endDate?: Date;
+  highlighted?: boolean;
 };
 
 export type Navigation = {
   name: string;
   icon: string;
   link: string;
+};
+
+export type OpenSourceContribution = {
+  title: string;
+  description: string;
+  link: string;
+};
+
+export type Post = {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  tags: string[];
+  date: Date;
 };

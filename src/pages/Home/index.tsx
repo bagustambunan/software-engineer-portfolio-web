@@ -5,22 +5,22 @@ import Section from "../../components/Section";
 import { profile } from "../../constants/profile";
 import routes from "../../constants/route";
 import styles from "./style.module.css";
+import Avatar from "../../components/Avatar";
+import { experiences } from "../../constants/experince";
+import ExperienceList from "../../components/ExperienceList";
+import ProjectList from "../../components/ProjectList";
+import { projects } from "../../constants/project";
+import { posts } from "../../constants/post";
+import PostList from "../../components/PostList";
 
 export default function HomePage() {
   const navigate = useNavigate();
   return (
     <div className={styles.homeContainer}>
       <PageTitle title="👋 Hi" />
-      <img
-        src={profile.photo}
-        alt={profile.name}
-        title={profile.name}
-        className={styles.avatar}
-      />
-      <Section title="Name">
-        <p>{profile.name}</p>
-      </Section>
-      <Section title="About">
+      <Avatar />
+      <Section>
+        <p>I'm {profile.name}</p>
         <p>{profile.longDescription}</p>
       </Section>
       {profile.details?.map((detail, detailIndex) => (
@@ -28,15 +28,40 @@ export default function HomePage() {
           {detail.content}
         </Section>
       ))}
-      <div>
-        <Button
-          onClick={() => {
-            navigate(routes.resume);
-          }}
-        >
-          💾 Download my profile
-        </Button>
-      </div>
+      <Section>
+        <div>
+          <Button
+            onClick={() => {
+              navigate(routes.resume);
+            }}
+          >
+            💾 Download my profile
+          </Button>
+        </div>
+      </Section>
+      <Section title="✍️ Writings" level={2}>
+        <div className={styles.highlightContainer}>
+          <PostList carousel posts={posts} />
+        </div>
+      </Section>
+      <Section title="💼 Highlighted Experiences" level={2}>
+        <div className={styles.highlightContainer}>
+          <ExperienceList
+            carousel
+            experiences={experiences.filter(
+              (experience) => experience.highlighted
+            )}
+          />
+        </div>
+      </Section>
+      <Section title="📝 Highlighted Projects" level={2}>
+        <div className={styles.highlightContainer}>
+          <ProjectList
+            carousel
+            projects={projects.filter((project) => project.highlighted)}
+          />
+        </div>
+      </Section>
     </div>
   );
 }

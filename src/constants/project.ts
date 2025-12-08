@@ -1,7 +1,55 @@
-import { androidStack, pythonStack } from "./stack";
+import { androidStack, pythonStack, swiftStack, swiftUiStack } from "./stack";
 import { type Project, RoleEnum } from "./types";
 
 const softwareEngineerProjects: Project[] = [
+  {
+    name: "Sticker iOS",
+    role: RoleEnum.SOFTWARE_ENGINEER,
+    description: "An iOS app to add sticker packs to WhatsApp or WhatsApp Business.",
+    image: "images/project-oh-my-bear.png",
+    link: "https://github.com/bagustambunan/StickerIOS/",
+    stacks: [swiftStack, swiftUiStack],
+    highlighted: true,
+    details: [
+      {
+        title: "Features:",
+        descriptions: [
+          "Support static and animated stickers",
+          "Search sticker packs",
+          "Add sticker packs to favorites",
+          "Popular sticker packs",
+          "Most liked characters",
+          "All characters and character detail page",
+        ],
+      },
+    ],
+    image_list: [
+      {
+        title: "Splash Screen",
+        url: "images/screenshots/pic-1-splash-screen.png"
+      },
+      {
+        title: "Main Page",
+        url: "images/screenshots/pic-2-main-page.png"
+      },
+      {
+        title: "All Characters Page",
+        url: "images/screenshots/pic-3-all-characters.png"
+      },
+      {
+        title: "Search Page",
+        url: "images/screenshots/pic-4-search.png"
+      },
+      {
+        title: "Favorite Page",
+        url: "images/screenshots/pic-5-favorite.png"
+      },
+      {
+        title: "About Page",
+        url: "images/screenshots/pic-6-about.png"
+      }
+    ]
+  },
   {
     name: "Oh My Bear Cute Stickers",
     role: RoleEnum.SOFTWARE_ENGINEER,
@@ -16,14 +64,7 @@ const softwareEngineerProjects: Project[] = [
       },
     ],
     stacks: [androidStack],
-  },
-  {
-    name: "Oh My Bear Cute Stickers (iOS)",
-    role: RoleEnum.SOFTWARE_ENGINEER,
-    description: "An iOS app to get collection of cute stickers created by me.",
-    image: "images/project-oh-my-bear.png",
-    link: "",
-    stacks: [],
+    highlighted: true,
   },
   {
     name: "SIGAP COVID-19 LINE Chatbot",

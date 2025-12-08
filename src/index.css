@@ -16,7 +16,10 @@
   --background-color: #242424;
   --button-color: #1a1a1a;
 
+  --carousel-background-color: rgba(255, 255, 255, 0.07);
+
   --app-padding: 72px;
+  --carousel-padding: 36px;
   --font-size: 1em;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -46,12 +49,15 @@
     --text-color-with-opacity: rgba(0, 0, 0, 0.5);
     --background-color: #ffffff;
     --button-color: #f9f9f9;
+
+    --carousel-background-color: rgba(0, 0, 0, 0.03);
   }
 }
 
 @media (max-width: 600px) {
   :root {
     --app-padding: 16px;
+    --carousel-padding: 8px;
   }
   body {
     margin-bottom: 64px !important;
@@ -61,6 +67,7 @@
 @media (min-width: 601px) and (max-width: 1000px) {
   :root {
     --app-padding: 48px;
+    --carousel-padding: 24px;
   }
 }
 

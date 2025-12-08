@@ -5,6 +5,41 @@ export const androidStack: Stack = {
   icon: "images/stack-android.webp",
 };
 
+export const typescriptStack: Stack = {
+  name: "Typescript",
+  icon: "images/stack-typescript.png",
+};
+
+export const javascriptStack: Stack = {
+  name: "Javascript",
+  icon: "images/stack-javascript.png",
+};
+
+export const linuxServerStack: Stack = {
+  name: "Linux Server",
+  icon: "images/stack-linux-server.png",
+};
+
+export const microsoftSqlStack: Stack = {
+  name: "Microsoft SQL Server",
+  icon: "images/stack-microsoft-sql-server.png",
+};
+
+export const playwrightStack: Stack = {
+  name: "Playwright",
+  icon: "images/stack-playwright.png",
+};
+
+export const nextJsStack: Stack = {
+  name: "Next.js",
+  icon: "images/stack-nextjs.png",
+};
+
+export const expressJsStack: Stack = {
+  name: "Express.js",
+  icon: "images/stack-expressjs.png",
+};
+
 export const pythonStack: Stack = {
   name: "Python",
   icon: "images/stack-python.png",
@@ -48,4 +83,14 @@ export const javaStack: Stack = {
 export const cStack: Stack = {
   name: "C Programming Language",
   icon: "images/stack-c.png",
+};
+
+export const swiftStack: Stack = {
+  name: "Swift",
+  icon: "images/stack-swift.png",
+};
+
+export const swiftUiStack: Stack = {
+  name: "SwiftUI",
+  icon: "images/stack-swiftui.png",
 };
