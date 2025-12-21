@@ -1,6 +1,4 @@
 :root {
-  --background-image: url('/images/paper-black.png');
-
   --primary-color: #84CCF8;
   --primary-color-hover: #106194;
   --text-color: #213547;
@@ -18,10 +16,9 @@
 
   color-scheme: light dark;
   color: var(--text-color);
-  background-color: var(--background-color);
-  background-image: var(--background-image);
-  background-repeat: repeat;
-  background-size: 24px 24px;
+  background-image: url('https://plus.unsplash.com/premium_photo-1681400745727-c69f8e47f524');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -62,10 +59,13 @@ hi, h2, h3, h4, h5, h6, p {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  resize: both;
+  overflow: auto;
 }
 
 .window-header {
-  padding: 8px;
+  padding: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,11 +74,52 @@ hi, h2, h3, h4, h5, h6, p {
 }
 
 .window-title {
-  font-size: 1.2em;
   font-weight: 600;
   color: var(--text-color);
+  cursor: default;
+}
+
+.window-actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.window-actions button {
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.close-button {
+  background-color: rgb(224, 83, 83);
+}
+
+.close-button:hover {
+  background-color: rgb(177, 57, 57);
 }
 
 .window-content {
-  padding: 8px;
+  padding: 16px;
+}
+
+.full-width {
+  width: calc(100% - var(--app-padding) * 2);
+}
+
+.full-height {
+  height: calc(100vh - var(--app-padding) * 2);
+}
+
+.hidden {
+  display: none;
 }

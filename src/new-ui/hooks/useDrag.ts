@@ -1,3 +1,6 @@
+/*
+  Copied from https://codesandbox.io/p/sandbox/draggable-div-element-react-hook-56xrm
+*/
 // @ts-nocheck
 
 import { useCallback, useEffect, useState } from "react";
