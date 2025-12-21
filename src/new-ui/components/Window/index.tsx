@@ -1,9 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useDrag } from "../../hooks/useDrag";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { closeWindow, openWindow } from "../../../redux/slices/windowsSlice";
 
 interface WindowProps {
+  windowKey: string;
   title?: string;
   closable?: boolean;
+  defaultOpen?: boolean;
   customStyle?: {
     window?: {
       width?: string;
@@ -22,29 +26,38 @@ interface WindowProps {
 
 export default function Window({
   children,
+  windowKey,
   title,
   closable = true,
+  defaultOpen = false,
   customStyle,
   onClose,
 }: React.PropsWithChildren<WindowProps>) {
+  const { openedWindowKeys } = useAppSelector((state) => state.windows);
+  const dispatch = useAppDispatch();
+
   const draggableRef = useRef<HTMLDivElement>(null);
   const { position, handleMouseDown } = useDrag({
     ref: draggableRef,
   });
 
-  const [isHidden, setIsHidden] = useState(false);
-
   const handleClose = () => {
     if (!closable) {
       return;
     }
-    setIsHidden(true);
+    dispatch(closeWindow(windowKey));
     onClose?.();
   };
 
+  useEffect(() => {
+    if (defaultOpen) {
+      dispatch(openWindow(windowKey));
+    }
+  }, [defaultOpen]);
+
   return (
     <div
-      className={`window-container${isHidden ? " hidden" : ""}`}
+      className={`window-container${!openedWindowKeys.includes(windowKey) ? " hidden" : ""}`}
       ref={draggableRef}
       style={{
         top: position?.y,

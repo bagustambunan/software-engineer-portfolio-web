@@ -5,14 +5,15 @@ import Button from "../../components/Button";
 import Window from "../../components/Window";
 import routes from "../../../constants/route";
 import useWindowNavigate from "../../hooks/useWindowNavigate";
-import ContactPage from "../Contact";
 
 export default function HomePage() {
-  const contactWindow = useWindowNavigate();
+  const contactWindow = useWindowNavigate("contact");
   return (
     <Window
+      windowKey="home"
       title={profile.name}
       closable={false}
+      defaultOpen={true}
       customStyle={{ other: { fullWidth: true, fullHeight: true } }}
     >
       <div className="container">
@@ -22,7 +23,6 @@ export default function HomePage() {
           <Button onClick={contactWindow.handleOpen}>Contact Me</Button>
         </Link>
       </div>
-      {contactWindow.isOpen && <ContactPage />}
     </Window>
   );
 }
