@@ -26,9 +26,6 @@ export default function Window({
   closable = true,
   customStyle,
   onClose,
-  onMinimize,
-  onMaximize,
-  onRestore,
 }: React.PropsWithChildren<WindowProps>) {
   const draggableRef = useRef<HTMLDivElement>(null);
   const { position, handleMouseDown } = useDrag({

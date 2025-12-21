@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./new-ui/index.css";
 import Avatar from "./components/Avatar";
 import Layout from "./new-ui/app-layout/Layout";
+import ContactPage from "./new-ui/pages/Contact";
+import routes from "./constants/route";
 
 const HomePage = lazy(() => import("./new-ui/pages/Home"));
 
@@ -14,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
+            <Route path={routes.contact} element={<ContactPage />} />
           </Route>
         </Routes>
       </Suspense>

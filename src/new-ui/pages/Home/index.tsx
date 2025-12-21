@@ -1,40 +1,28 @@
-import { links } from "../../../constants/link";
+import { Link } from "react-router-dom";
+import Avatar from "../../../components/Avatar";
 import { profile } from "../../../constants/profile";
-import { LinkType } from "../../../constants/types";
-import Section from "../../components/Section";
+import Button from "../../components/Button";
 import Window from "../../components/Window";
-import styles from "./style.module.css";
+import routes from "../../../constants/route";
+import useWindowNavigate from "../../hooks/useWindowNavigate";
+import ContactPage from "../Contact";
 
 export default function HomePage() {
+  const contactWindow = useWindowNavigate();
   return (
-    <div className={styles.homeContainer}>
-      <Window
-        title="About Me"
-        closable={false}
-        customStyle={{ other: { fullWidth: true, fullHeight: true } }}
-      >
+    <Window
+      title={profile.name}
+      closable={false}
+      customStyle={{ other: { fullWidth: true, fullHeight: true } }}
+    >
+      <div className="container">
+        <Avatar />
         {profile.longDescription}
-      </Window>
-      <Window title="Contact">
-        <Section title="Contact">
-          {links.filter((link) => link.type === LinkType.CONTACT).map((link) => (
-            <div key={link.name}>
-              <a href={link.link} target="_blank" rel="noopener noreferrer">
-                {link.name}
-              </a>
-            </div>
-          ))}
-        </Section>
-        <Section title="Other Links">
-          {links.filter((link) => link.type === LinkType.OTHER).map((link) => (
-            <div key={link.name}>
-              <a href={link.link} target="_blank" rel="noopener noreferrer">
-                {link.name}
-              </a>
-            </div>
-          ))}
-        </Section>
-      </Window>
-    </div>
+        <Link to={routes.contact}>
+          <Button onClick={contactWindow.handleOpen}>Contact Me</Button>
+        </Link>
+      </div>
+      {contactWindow.isOpen && <ContactPage />}
+    </Window>
   );
 }
