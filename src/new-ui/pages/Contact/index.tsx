@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
 import { links } from "../../../constants/link";
 import { LinkType } from "../../../constants/types";
 import Section from "../../components/Section";
 import Window from "../../components/Window";
-import { useAppSelector } from "../../../redux/hooks";
+import routes from "../../../constants/route";
+import useWindowPage from "../../hooks/useWindowPage";
 
 export default function ContactPage() {
-  const [opened, setOpened] = useState<boolean>(false);
-
-  const { openedWindowKeys } = useAppSelector((state) => state.windows);
-  useEffect(() => {
-    setOpened(openedWindowKeys.includes("contact"));
-  }, [openedWindowKeys]);
-
+  const { opened, isThisPage } = useWindowPage("contact", routes.contact);
+  
   if (!opened) return null;
-
   return (
-    <Window windowKey="contact" title="Contact">
+    <Window
+      windowKey="contact"
+      title="Contact"
+      closable={!isThisPage}
+      defaultOpen={isThisPage}
+      customStyle={isThisPage ? { other: { fullWidth: true, fullHeight: true } } : undefined}
+    >
       <Section title="Contact">
         {links
           .filter((link) => link.type === LinkType.CONTACT)

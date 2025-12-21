@@ -119,7 +119,7 @@ hi, h2, h3, h4, h5, h6, p {
 }
 
 .full-width {
-  width: calc(100% - var(--app-padding) * 2);
+  width: calc(100vw - var(--app-padding) * 2);
 }
 
 .full-height {
