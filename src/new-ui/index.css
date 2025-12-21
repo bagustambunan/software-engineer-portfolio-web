@@ -1,0 +1,84 @@
+:root {
+  --background-image: url('/images/paper-black.png');
+
+  --primary-color: #84CCF8;
+  --primary-color-hover: #106194;
+  --text-color: #213547;
+  --text-color-with-opacity: rgba(0, 0, 0, 0.5);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --background-color: #ffffff;
+  --button-color: #f9f9f9;
+
+  --app-padding: 72px;
+  --font-size: 1em;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-repeat: repeat;
+  background-size: 24px 24px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: var(--font-size);
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--primary-color-hover);
+}
+
+body {
+  display: relative;
+  margin: 0;
+  padding: var(--app-padding);
+}
+
+hi, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.window-container {
+  position: absolute;
+}
+
+.window-body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.window-header {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+}
+
+.window-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.window-content {
+  padding: 8px;
+}
