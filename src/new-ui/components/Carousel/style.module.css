@@ -1,0 +1,25 @@
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carouselFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carouselActionContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carouselItem {
+  width: 100%;
+  height: 100%;
+}

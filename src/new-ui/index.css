@@ -94,6 +94,8 @@ hi, h2, h3, h4, h5, h6, p {
 
   min-width: 320px;
   min-height: 240px;
+
+  max-height: calc(100vh - var(--app-padding) * 2);
 }
 
 .window-header {
@@ -103,6 +105,11 @@ hi, h2, h3, h4, h5, h6, p {
   justify-content: space-between;
   align-items: center;
   cursor: move;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+
+  position: sticky;
+  top: 0;
 }
 
 .window-title {

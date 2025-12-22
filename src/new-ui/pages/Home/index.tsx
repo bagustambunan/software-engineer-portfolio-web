@@ -9,6 +9,7 @@ import { useEffect } from "react";
 export default function HomePage() {
   const contactWindow = useWindowNavigate("contact");
   const fizzBuzzWindow = useWindowNavigate("fizzBuzz");
+  const experiencesWindow = useWindowNavigate("experiences");
 
   useEffect(() => {
     console.log("HomePage mounted");
@@ -26,6 +27,9 @@ export default function HomePage() {
       </Link>
       <Link to={routes.fizzBuzz}>
         <Button onClick={fizzBuzzWindow.open}>FizzBuzz</Button>
+      </Link>
+      <Link to={routes.experiences}>
+        <Button onClick={experiencesWindow.open}>Experiences</Button>
       </Link>
     </div>
   );

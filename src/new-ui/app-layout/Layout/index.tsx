@@ -13,7 +13,7 @@ export default function Layout() {
         windowKey={page.windowKey}
         title={page.title}
         closable={false}
-        customStyle={{ other: { fullWidth: true, fullHeight: true } }}
+        customStyle={{ other: { fullWidth: true } }}
       >
         <Outlet />
       </Window>

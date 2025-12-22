@@ -22,4 +22,10 @@ export const pages: PageConfig[] = [
     route: routes.fizzBuzz,
     component: lazy(() => import("../pages/FizzBuzz")),
   },
+  {
+    windowKey: "experiences",
+    title: "Experiences",
+    route: routes.experiences,
+    component: lazy(() => import("../pages/Experiences")),
+  },
 ];
