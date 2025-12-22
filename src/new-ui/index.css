@@ -85,6 +85,9 @@ hi, h2, h3, h4, h5, h6, p {
 
   resize: both;
   overflow: auto;
+
+  min-width: 320px;
+  min-height: 240px;
 }
 
 .window-header {
