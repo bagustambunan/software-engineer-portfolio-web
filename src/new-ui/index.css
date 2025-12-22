@@ -143,7 +143,7 @@ hi, h2, h3, h4, h5, h6, p {
 }
 
 .button-disabled {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
   opacity: 0.5;
 }
 

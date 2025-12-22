@@ -2,14 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-top: 32px;
 }
 
 .projectContainer {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-bottom: 32px;
 }
 
 .projectImageContainer > img {

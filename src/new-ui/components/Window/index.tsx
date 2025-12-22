@@ -19,9 +19,6 @@ interface WindowProps {
     };
   };
   onClose?: () => void;
-  onMinimize?: () => void;
-  onMaximize?: () => void;
-  onRestore?: () => void;
 }
 
 export default function Window({
@@ -41,10 +38,12 @@ export default function Window({
   });
 
   const handleClose = () => {
-    if (!closable || !windowId) {
+    if (!closable) {
       return;
     }
-    dispatch(closeWindow(windowId));
+    if (windowId) {
+      dispatch(closeWindow(windowId));
+    }
     onClose?.();
   };
 
