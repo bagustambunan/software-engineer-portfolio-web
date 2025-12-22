@@ -1,13 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useDrag } from "../../hooks/useDrag";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { closeWindow, openWindow } from "../../../redux/slices/windowsSlice";
+import { useAppDispatch } from "../../../redux/hooks";
+import { closeWindow } from "../../../redux/slices/windowsSlice";
 
 interface WindowProps {
   windowKey: string;
   title?: string;
   closable?: boolean;
-  defaultOpen?: boolean;
   customStyle?: {
     window?: {
       width?: string;
@@ -29,11 +28,9 @@ export default function Window({
   windowKey,
   title,
   closable = true,
-  defaultOpen = false,
   customStyle,
   onClose,
 }: React.PropsWithChildren<WindowProps>) {
-  const { openedWindowKeys } = useAppSelector((state) => state.windows);
   const dispatch = useAppDispatch();
 
   const draggableRef = useRef<HTMLDivElement>(null);
@@ -49,15 +46,9 @@ export default function Window({
     onClose?.();
   };
 
-  useEffect(() => {
-    if (defaultOpen) {
-      dispatch(openWindow(windowKey));
-    }
-  }, [defaultOpen]);
-
   return (
     <div
-      className={`window-container${!openedWindowKeys.includes(windowKey) ? " hidden" : ""}`}
+      className="window-container"
       ref={draggableRef}
       style={{
         top: position?.y,
@@ -85,7 +76,7 @@ export default function Window({
             </button>
           </div>
         </div>
-        <div 
+        <div
           className="window-content"
           onTouchStart={(e) => {
             e.stopPropagation();

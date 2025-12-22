@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./new-ui/index.css";
@@ -8,19 +8,20 @@ import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import routes from "./constants/route";
 
+const HomePage = lazy(() => import("./new-ui/pages/Home"));
+const ContactPage = lazy(() => import("./new-ui/pages/Contact"));
+
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
-    <StrictMode>
-      <BrowserRouter>
-        <Suspense fallback={<Avatar />}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={null} />
-              <Route path={routes.contact} element={null} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </StrictMode>
+    <BrowserRouter>
+      <Suspense fallback={<Avatar />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path={routes.contact} element={<ContactPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   </Provider>
 );

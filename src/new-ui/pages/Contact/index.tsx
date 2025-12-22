@@ -1,22 +1,18 @@
 import { links } from "../../../constants/link";
 import { LinkType } from "../../../constants/types";
 import Section from "../../components/Section";
-import Window from "../../components/Window";
-import routes from "../../../constants/route";
-import useWindowPage from "../../hooks/useWindowPage";
+import { useEffect } from "react";
 
 export default function ContactPage() {
-  const windowPage = useWindowPage("contact", routes.contact);
-  
-  if (!windowPage.isOpened) return null;
+  useEffect(() => {
+    console.log("ContactPage mounted");
+    return () => {
+      console.log("ContactPage unmounted");
+    };
+  }, []);
+
   return (
-    <Window
-      windowKey="contact"
-      title="Contact"
-      closable={!windowPage.isThisPage}
-      defaultOpen={windowPage.isThisPage}
-      customStyle={windowPage.isThisPage ? { other: { fullWidth: true, fullHeight: true } } : undefined}
-    >
+    <div className="container">
       <Section title="Contact">
         {links
           .filter((link) => link.type === LinkType.CONTACT)
@@ -39,6 +35,6 @@ export default function ContactPage() {
             </div>
           ))}
       </Section>
-    </Window>
+    </div>
   );
 }
