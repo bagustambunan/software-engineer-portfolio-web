@@ -16,9 +16,6 @@
 
   color-scheme: light dark;
   color: var(--text-color);
-  background-image: url('https://plus.unsplash.com/premium_photo-1681400745727-c69f8e47f524');
-  background-repeat: no-repeat;
-  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -52,6 +49,15 @@ a {
 }
 a:hover {
   color: var(--primary-color-hover);
+}
+
+html {
+  height: 100%;
+  background-image: url('https://plus.unsplash.com/premium_photo-1681400745727-c69f8e47f524');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body {
