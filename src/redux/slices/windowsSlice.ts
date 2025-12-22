@@ -1,11 +1,16 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
+export interface WindowInstance {
+  id: string;
+  windowKey: string;
+}
+
 interface State {
-  openedWindowKeys: string[];
+  windows: WindowInstance[];
 }
 
 const initialState: State = {
-  openedWindowKeys: [],
+  windows: [],
 };
 
 export const windowsSlice = createSlice({
@@ -13,10 +18,14 @@ export const windowsSlice = createSlice({
   initialState,
   reducers: {
     openWindow: (state, action: PayloadAction<string>) => {
-      state.openedWindowKeys.push(action.payload);
+      const windowId = `${action.payload}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      state.windows.push({
+        id: windowId,
+        windowKey: action.payload,
+      });
     },
     closeWindow: (state, action: PayloadAction<string>) => {
-      state.openedWindowKeys = state.openedWindowKeys.filter(key => key !== action.payload);
+      state.windows = state.windows.filter(window => window.id !== action.payload);
     },
   },
 });

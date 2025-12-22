@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Window from "../../components/Window";
 import { pages } from "../../constants/pages";
+import WindowsContainer from "../../components/WindowsContainer";
 
 export default function Layout() {
   const pathname = useLocation().pathname;
@@ -16,6 +17,7 @@ export default function Layout() {
       >
         <Outlet />
       </Window>
+      <WindowsContainer />
     </main>
   );
 }

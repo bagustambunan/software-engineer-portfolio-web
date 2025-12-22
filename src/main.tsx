@@ -10,6 +10,7 @@ import routes from "./constants/route";
 
 const HomePage = lazy(() => import("./new-ui/pages/Home"));
 const ContactPage = lazy(() => import("./new-ui/pages/Contact"));
+const FizzBuzzPage = lazy(() => import("./new-ui/pages/FizzBuzz"));
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path={routes.contact} element={<ContactPage />} />
+            <Route path={routes.fizzBuzz} element={<FizzBuzzPage />} />
           </Route>
         </Routes>
       </Suspense>

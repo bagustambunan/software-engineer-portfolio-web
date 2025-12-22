@@ -7,17 +7,17 @@ const useWindowPage = (windowKey: string, route: string) => {
   const isThisPage = useLocation().pathname === route;
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
-  const { openedWindowKeys } = useAppSelector((state) => state.windows);
+  const { windows } = useAppSelector((state) => state.windows);
   useEffect(() => {
-    setIsOpened(openedWindowKeys.includes(windowKey));
-  }, [openedWindowKeys]);
+    setIsOpened(windows.some((window) => window.windowKey === windowKey));
+  }, [windows, windowKey]);
 
   const dispatch = useAppDispatch();
   useEffect(() => {
     if (isThisPage) {
       dispatch(openWindow(windowKey));
     }
-  }, [isThisPage]);
+  }, [isThisPage, dispatch, windowKey]);
 
   return {
     isOpened,

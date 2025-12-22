@@ -4,6 +4,7 @@ import { useAppDispatch } from "../../../redux/hooks";
 import { closeWindow } from "../../../redux/slices/windowsSlice";
 
 interface WindowProps {
+  windowId?: string;
   windowKey: string;
   title?: string;
   closable?: boolean;
@@ -25,7 +26,8 @@ interface WindowProps {
 
 export default function Window({
   children,
-  windowKey,
+  windowId,
+  windowKey: _windowKey,
   title,
   closable = true,
   customStyle,
@@ -39,10 +41,10 @@ export default function Window({
   });
 
   const handleClose = () => {
-    if (!closable) {
+    if (!closable || !windowId) {
       return;
     }
-    dispatch(closeWindow(windowKey));
+    dispatch(closeWindow(windowId));
     onClose?.();
   };
 

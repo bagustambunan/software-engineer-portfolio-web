@@ -5,6 +5,7 @@ const routes = {
   achievements: "/achievements",
   contact: "/contact",
   resume: "/resume",
+  fizzBuzz: "/fizz-buzz",
 };
 
 export default routes;

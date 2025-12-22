@@ -8,6 +8,7 @@ import { useEffect } from "react";
 
 export default function HomePage() {
   const contactWindow = useWindowNavigate("contact");
+  const fizzBuzzWindow = useWindowNavigate("fizzBuzz");
 
   useEffect(() => {
     console.log("HomePage mounted");
@@ -21,7 +22,10 @@ export default function HomePage() {
       <Avatar />
       {profile.longDescription}
       <Link to={routes.contact}>
-        <Button onClick={contactWindow.handleOpen}>Contact Me</Button>
+        <Button onClick={contactWindow.open}>Contact Me</Button>
+      </Link>
+      <Link to={routes.fizzBuzz}>
+        <Button onClick={fizzBuzzWindow.open}>FizzBuzz</Button>
       </Link>
     </div>
   );
