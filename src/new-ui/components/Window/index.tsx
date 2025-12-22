@@ -37,7 +37,7 @@ export default function Window({
   const dispatch = useAppDispatch();
 
   const draggableRef = useRef<HTMLDivElement>(null);
-  const { position, handleMouseDown } = useDrag({
+  const { position, handleMouseDown, handleTouchStart } = useDrag({
     ref: draggableRef,
   });
 
@@ -70,7 +70,11 @@ export default function Window({
         }${customStyle?.other?.fullHeight ? " full-height" : ""}`}
         style={customStyle?.window}
       >
-        <div className="window-header" onMouseDown={handleMouseDown}>
+        <div
+          className="window-header"
+          onMouseDown={handleMouseDown}
+          onTouchStart={handleTouchStart}
+        >
           <div className="window-title">{title}</div>
           <div className="window-actions">
             <button
@@ -81,7 +85,14 @@ export default function Window({
             </button>
           </div>
         </div>
-        <div className="window-content">{children}</div>
+        <div 
+          className="window-content"
+          onTouchStart={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );
