@@ -11,7 +11,7 @@ const useWindowNavigate = (windowKey: string) => {
   };
 
   return {
-    isOpen: openedWindowKeys.includes(windowKey),
+    isOpened: openedWindowKeys.includes(windowKey),
     handleOpen,
   };
 };

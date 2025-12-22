@@ -8,17 +8,17 @@ import useWindowNavigate from "../../hooks/useWindowNavigate";
 import useWindowPage from "../../hooks/useWindowPage";
 
 export default function HomePage() {
-  const { opened, isThisPage } = useWindowPage("home", routes.home);
+  const windowPage = useWindowPage("home", routes.home);
   const contactWindow = useWindowNavigate("contact");
 
-  if (!opened) return null;
+  if (!windowPage.isOpened) return null;
   return (
     <Window
       windowKey="home"
       title={profile.name}
-      closable={!isThisPage}
-      defaultOpen={isThisPage}
-      customStyle={isThisPage ? { other: { fullWidth: true, fullHeight: true } } : undefined}
+      closable={!windowPage.isThisPage}
+      defaultOpen={windowPage.isThisPage}
+      customStyle={windowPage.isThisPage ? { other: { fullWidth: true, fullHeight: true } } : undefined}
     >
       <div className="container">
         <Avatar />

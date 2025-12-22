@@ -5,11 +5,11 @@ import { openWindow } from "../../redux/slices/windowsSlice";
 
 const useWindowPage = (windowKey: string, route: string) => {
   const isThisPage = useLocation().pathname === route;
-  const [opened, setOpened] = useState<boolean>(false);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
 
   const { openedWindowKeys } = useAppSelector((state) => state.windows);
   useEffect(() => {
-    setOpened(openedWindowKeys.includes(windowKey));
+    setIsOpened(openedWindowKeys.includes(windowKey));
   }, [openedWindowKeys]);
 
   const dispatch = useAppDispatch();
@@ -20,7 +20,7 @@ const useWindowPage = (windowKey: string, route: string) => {
   }, [isThisPage]);
 
   return {
-    opened,
+    isOpened,
     isThisPage,
   };
 };

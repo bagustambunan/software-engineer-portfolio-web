@@ -6,16 +6,16 @@ import routes from "../../../constants/route";
 import useWindowPage from "../../hooks/useWindowPage";
 
 export default function ContactPage() {
-  const { opened, isThisPage } = useWindowPage("contact", routes.contact);
+  const windowPage = useWindowPage("contact", routes.contact);
   
-  if (!opened) return null;
+  if (!windowPage.isOpened) return null;
   return (
     <Window
       windowKey="contact"
       title="Contact"
-      closable={!isThisPage}
-      defaultOpen={isThisPage}
-      customStyle={isThisPage ? { other: { fullWidth: true, fullHeight: true } } : undefined}
+      closable={!windowPage.isThisPage}
+      defaultOpen={windowPage.isThisPage}
+      customStyle={windowPage.isThisPage ? { other: { fullWidth: true, fullHeight: true } } : undefined}
     >
       <Section title="Contact">
         {links
