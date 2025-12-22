@@ -1,15 +1,8 @@
 import { links } from "../../../constants/link";
 import { LinkType } from "../../../constants/types";
 import Section from "../../components/Section";
-import { useEffect } from "react";
 
 export default function ContactPage() {
-  useEffect(() => {
-    console.log("ContactPage mounted");
-    return () => {
-      console.log("ContactPage unmounted");
-    };
-  }, []);
 
   return (
     <div className="container">

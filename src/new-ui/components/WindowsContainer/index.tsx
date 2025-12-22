@@ -19,7 +19,7 @@ export default function WindowsContainer() {
             key={window.id}
             windowId={window.id}
             windowKey={window.windowKey}
-            title={page.title}
+            title={page.icon + " " + page.title}
             closable={true}
           >
             <Suspense fallback={null}>

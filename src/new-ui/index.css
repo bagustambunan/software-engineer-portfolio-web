@@ -77,6 +77,12 @@ hi, h2, h3, h4, h5, h6, p {
   gap: 16px;
 }
 
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
 .window-container {
   position: absolute;
 }

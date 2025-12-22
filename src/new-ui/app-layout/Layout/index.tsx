@@ -11,7 +11,7 @@ export default function Layout() {
     <main>
       <Window
         windowKey={page.windowKey}
-        title={page.title}
+        title={page.icon + " " + page.title}
         closable={false}
         customStyle={{ other: { fullWidth: true } }}
       >
