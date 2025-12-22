@@ -28,4 +28,10 @@ export const pages: PageConfig[] = [
     route: routes.experiences,
     component: lazy(() => import("../pages/Experiences")),
   },
+  {
+    windowKey: "projects",
+    title: "Projects",
+    route: routes.projects,
+    component: lazy(() => import("../pages/Projects")),
+  },
 ];

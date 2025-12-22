@@ -10,6 +10,7 @@ export default function HomePage() {
   const contactWindow = useWindowNavigate("contact");
   const fizzBuzzWindow = useWindowNavigate("fizzBuzz");
   const experiencesWindow = useWindowNavigate("experiences");
+  const projectsWindow = useWindowNavigate("projects");
 
   useEffect(() => {
     console.log("HomePage mounted");
@@ -30,6 +31,9 @@ export default function HomePage() {
       </Link>
       <Link to={routes.experiences}>
         <Button onClick={experiencesWindow.open}>Experiences</Button>
+      </Link>
+      <Link to={routes.projects}>
+        <Button onClick={projectsWindow.open}>Projects</Button>
       </Link>
     </div>
   );
