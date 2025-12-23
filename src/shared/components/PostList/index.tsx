@@ -4,12 +4,13 @@ import Carousel from "../Carousel";
 import Empty from "../Empty";
 import styles from "./style.module.css";
 import TagList from "../TagList";
+import Image from "../Image";
 
 const PostItem = ({ post }: { post: Post }) => {
   return (
     <div key={post.title} className={styles.postContainer}>
       <div>
-        <img src={post.image} alt={post.title} title={post.title} />
+        <Image src={post.image} alt={post.title} title={post.title} />
       </div>
       <div>
         <h3>{post.title}</h3>

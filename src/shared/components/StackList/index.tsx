@@ -1,4 +1,5 @@
 import type { Stack } from "../../constants/types";
+import Image from "../Image";
 import styles from "./style.module.css";
 
 export default function StackList({
@@ -16,7 +17,7 @@ export default function StackList({
     <div className={styles.stackListContainer}>
       <div>
         {stacks.map((stack, stackIndex) => (
-          <img
+          <Image
             src={stack.icon}
             alt={stack.name}
             title={stack.name}

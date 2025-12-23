@@ -6,6 +6,7 @@ import Empty from "../Empty";
 import Carousel from "../Carousel";
 import { useState } from "react";
 import routes from "../../constants/route";
+import Image from "../Image";
 
 type ProjectImage = {
   url: string;
@@ -22,7 +23,7 @@ const PreviewImage = ({
   return (
     <div className={styles.previewImageContainer} onClick={onDismiss}>
       <h2>{image.title}</h2>
-      <img src={image.url} alt={image.title} title={image.title} />
+      <Image src={image.url} alt={image.title} title={image.title} />
     </div>
   );
 };
@@ -39,7 +40,7 @@ const ProjectItem = ({
   return (
     <div key={`project-${projectIndex}`} className={styles.projectContainer}>
       <div className={styles.projectImageContainer}>
-        <img src={project.image} alt={project.name} title={project.name} />
+        <Image src={project.image} alt={project.name} title={project.name} />
       </div>
       <div className={styles.projectInfoContainer}>
         <h3>{project.name}</h3>
@@ -66,7 +67,7 @@ const ProjectItem = ({
           <div className={styles.imageListContainer}>
             {project.image_list?.map((image, imageIndex) => (
               <div key={`project-${projectIndex}-image-${imageIndex}`}>
-                <img
+                <Image
                   src={image.url}
                   alt={image.title}
                   title={image.title}

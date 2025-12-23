@@ -6,6 +6,7 @@ import Carousel from "../Carousel";
 import { Link } from "react-router-dom";
 import routes from "../../constants/route";
 import type { Experience } from "../../constants/types";
+import Image from "../Image";
 
 const ExperienceItem = ({
   experienceIndex,
@@ -17,7 +18,7 @@ const ExperienceItem = ({
   return (
     <div className={styles.experienceContainer}>
       <div className={styles.experienceLogoContainer}>
-        <img
+        <Image
           src={experience.logo}
           alt={experience.company}
           title={experience.company}
