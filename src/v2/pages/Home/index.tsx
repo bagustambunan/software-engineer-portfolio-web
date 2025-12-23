@@ -6,9 +6,9 @@ import useWindowNavigate from "../../hooks/useWindowNavigate";
 import Avatar from "../../../shared/components/Avatar";
 
 export default function HomePage() {
-  const contactWindow = useWindowNavigate("contact");
-  const experiencesWindow = useWindowNavigate("experiences");
-  const projectsWindow = useWindowNavigate("projects");
+  const contactWindow = useWindowNavigate(routes.contact);
+  const experiencesWindow = useWindowNavigate(routes.experiences);
+  const projectsWindow = useWindowNavigate(routes.projects);
 
   return (
     <div className="container">

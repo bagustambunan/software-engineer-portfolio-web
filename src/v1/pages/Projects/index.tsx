@@ -1,5 +1,4 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import PageTitle from "../../../shared/components/PageTitle";
 import { profile } from "../../../shared/constants/profile";
 import Tabs from "../../../shared/components/Tabs";
 import { useMemo } from "react";
@@ -29,10 +28,6 @@ export default function ProjectsPage() {
 
   return (
     <div>
-      <PageTitle
-        title="📝 Proud Projects"
-        description="List of projects I'm proud of."
-      />
       {profile.roles.length === 1 ? (
         <ProjectList
           projects={projects.filter(

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../../shared/components/Button";
-import PageTitle from "../../../shared/components/PageTitle";
 import Section from "../../../shared/components/Section";
 import { profile } from "../../../shared/constants/profile";
 import routes from "../../../shared/constants/route";
@@ -17,7 +16,6 @@ export default function HomePage() {
   const navigate = useNavigate();
   return (
     <div className={styles.homeContainer}>
-      <PageTitle title="👋 Hi" />
       <Avatar />
       <Section>
         <p>I'm {profile.name}</p>

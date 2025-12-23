@@ -1,4 +1,3 @@
-import PageTitle from "../../../shared/components/PageTitle";
 import { links } from "../../../shared/constants/link";
 import LinkList from "../../../shared/components/LinkList";
 import { LinkType } from "../../../shared/constants/types";
@@ -7,7 +6,6 @@ import Section from "../../../shared/components/Section";
 export default function ContactPage() {
   return (
     <div>
-      <PageTitle title="💬 Contact Me" description="Get in touch with me." />
       <div className="container">
         <Section title="Contact">
           <LinkList

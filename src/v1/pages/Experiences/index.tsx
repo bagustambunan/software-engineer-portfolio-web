@@ -1,4 +1,3 @@
-import PageTitle from "../../../shared/components/PageTitle";
 import { experiences } from "../../../shared/constants/experince";
 import ExperienceList from "../../../shared/components/ExperienceList";
 import { profile } from "../../../shared/constants/profile";
@@ -29,10 +28,6 @@ export default function ExperiencesPage() {
 
   return (
     <div>
-      <PageTitle
-        title="💼 Experiences"
-        description="List of experiences I've had."
-      />
       {profile.roles.length === 1 ? (
         <ExperienceList
           experiences={experiences.filter(
