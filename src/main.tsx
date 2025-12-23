@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./new-ui/index.css";
-import Avatar from "./components/Avatar";
-import Layout from "./new-ui/app-layout/Layout";
-import { store } from "./redux/store";
+import "./v2/index.css";
 import { Provider } from "react-redux";
-import { pages } from "./new-ui/constants/pages";
+import { store } from "./v2/redux/store";
+import Avatar from "./v1/components/Avatar";
+import Layout from "./v2/app-layout/Layout";
+import { pages } from "./v2/constants/pages";
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
