@@ -1,11 +1,11 @@
 import styles from "./style.module.css";
 import StackList from "../StackList";
-import { formatDate } from "../../../shared/utils/datetime";
+import { formatDate } from "../../utils/datetime";
 import Empty from "../Empty";
 import Carousel from "../Carousel";
 import { Link } from "react-router-dom";
-import routes from "../../../shared/constants/route";
-import type { Experience } from "../../../shared/constants/types";
+import routes from "../../constants/route";
+import type { Experience } from "../../constants/types";
 
 const ExperienceItem = ({
   experienceIndex,

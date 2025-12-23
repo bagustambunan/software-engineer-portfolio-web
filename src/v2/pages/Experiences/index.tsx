@@ -1,6 +1,6 @@
 import { experiences } from "../../../shared/constants/experince";
 import { RoleEnum } from "../../../shared/constants/types";
-import ExperienceList from "../../components/ExperienceList";
+import ExperienceList from "../../../shared/components/ExperienceList";
 
 export default function ExperiencesPage() {
   return (

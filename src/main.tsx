@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./v2/index.css";
 import { Provider } from "react-redux";
 import { store } from "./v2/redux/store";
-import Avatar from "./v1/components/Avatar";
+import Avatar from "./shared/components/Avatar";
 import Layout from "./v2/app-layout/Layout";
 import { pages } from "./v2/constants/pages";
 

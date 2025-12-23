@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { profile } from "../../../shared/constants/profile";
-import Button from "../../components/Button";
+import Button from "../../../shared/components/Button";
 import routes from "../../../shared/constants/route";
 import useWindowNavigate from "../../hooks/useWindowNavigate";
-import Avatar from "../../../v1/components/Avatar";
+import Avatar from "../../../shared/components/Avatar";
 
 export default function HomePage() {
   const contactWindow = useWindowNavigate("contact");

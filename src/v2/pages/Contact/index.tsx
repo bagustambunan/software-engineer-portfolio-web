@@ -1,6 +1,6 @@
+import Section from "../../../shared/components/Section";
 import { links } from "../../../shared/constants/link";
 import { LinkType } from "../../../shared/constants/types";
-import Section from "../../components/Section";
 
 export default function ContactPage() {
 

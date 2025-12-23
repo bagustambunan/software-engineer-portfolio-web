@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
-import type { Project } from "../../../shared/constants/types";
+import type { Project } from "../../constants/types";
 import StackList from "../StackList";
 import Empty from "../Empty";
 import Carousel from "../Carousel";
 import { useState } from "react";
-import routes from "../../../shared/constants/route";
+import routes from "../../constants/route";
 
 type ProjectImage = {
   url: string;

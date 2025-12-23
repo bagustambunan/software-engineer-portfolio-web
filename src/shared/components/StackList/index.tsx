@@ -1,4 +1,4 @@
-import type { Stack } from "../../../shared/constants/types";
+import type { Stack } from "../../constants/types";
 import styles from "./style.module.css";
 
 export default function StackList({

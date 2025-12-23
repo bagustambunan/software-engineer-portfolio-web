@@ -1,5 +1,5 @@
 import { projects } from "../../../shared/constants/project";
-import ProjectList from "../../components/ProjectList";
+import ProjectList from "../../../shared/components/ProjectList";
 import { RoleEnum } from "../../../shared/constants/types";
 
 export default function ProjectsPage() {
