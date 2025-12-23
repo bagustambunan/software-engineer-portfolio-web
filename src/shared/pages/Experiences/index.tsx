@@ -1,9 +1,9 @@
-import { experiences } from "../../../shared/constants/experince";
-import ExperienceList from "../../../shared/components/ExperienceList";
-import { profile } from "../../../shared/constants/profile";
-import Tabs from "../../../shared/components/Tabs";
+import { experiences } from "../../constants/experince";
+import ExperienceList from "../../components/ExperienceList";
+import { profile } from "../../constants/profile";
+import Tabs from "../../components/Tabs";
 import { useLocation, useNavigate } from "react-router-dom";
-import { getSearchParam, setSearchParam } from "../../../shared/utils/url";
+import { getSearchParam, setSearchParam } from "../../utils/url";
 import { useMemo } from "react";
 
 export default function ExperiencesPage() {

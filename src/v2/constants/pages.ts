@@ -16,20 +16,20 @@ export const pages: PageConfig[] = [
     title: "Contact",
     icon: "💬",
     route: routes.contact,
-    component: lazy(() => import("../pages/Contact")),
+    component: lazy(() => import("../../shared/pages/Contact")),
   },
   {
     windowKey: routes.experiences,
     title: "Experiences",
     icon: "💼",
     route: routes.experiences,
-    component: lazy(() => import("../pages/Experiences")),
+    component: lazy(() => import("../../shared/pages/Experiences")),
   },
   {
     windowKey: routes.projects,
     title: "Projects",
     icon: "📝",
     route: routes.projects,
-    component: lazy(() => import("../pages/Projects")),
+    component: lazy(() => import("../../shared/pages/Projects")),
   },
 ];

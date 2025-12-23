@@ -3,12 +3,17 @@ import Window from "../../components/Window";
 import { pages } from "../../constants/pages";
 import WindowsContainer from "../../components/WindowsContainer";
 import routes from "../../../shared/constants/route";
+import { useEffect } from "react";
 
 export default function Layout() {
   const navigate = useNavigate();
   const pathname = useLocation().pathname;
   const page = pages.find((page) => page.route === pathname) || pages[0];
   const isHome = pathname === routes.home;
+
+  useEffect(() => {
+    window.document.title = `${page.title} | @bagustambunan`;
+  }, [page]);
 
   return (
     <main>

@@ -1,7 +1,7 @@
-import { links } from "../../../shared/constants/link";
-import LinkList from "../../../shared/components/LinkList";
-import { LinkType } from "../../../shared/constants/types";
-import Section from "../../../shared/components/Section";
+import { links } from "../../constants/link";
+import LinkList from "../../components/LinkList";
+import { LinkType } from "../../constants/types";
+import Section from "../../components/Section";
 
 export default function ContactPage() {
   return (

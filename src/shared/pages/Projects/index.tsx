@@ -1,10 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { profile } from "../../../shared/constants/profile";
-import Tabs from "../../../shared/components/Tabs";
+import { profile } from "../../constants/profile";
+import Tabs from "../../components/Tabs";
 import { useMemo } from "react";
-import { getSearchParam, setSearchParam } from "../../../shared/utils/url";
-import ProjectList from "../../../shared/components/ProjectList";
-import { projects } from "../../../shared/constants/project";
+import { getSearchParam, setSearchParam } from "../../utils/url";
+import ProjectList from "../../components/ProjectList";
+import { projects } from "../../constants/project";
 
 export default function ProjectsPage() {
   const location = useLocation();
