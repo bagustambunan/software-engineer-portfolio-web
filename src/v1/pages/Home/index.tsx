@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
-import PageTitle from "../../components/PageTitle";
-import Section from "../../components/Section";
+import Button from "../../../shared/components/Button";
+import PageTitle from "../../../shared/components/PageTitle";
+import Section from "../../../shared/components/Section";
 import { profile } from "../../../shared/constants/profile";
 import routes from "../../../shared/constants/route";
 import styles from "./style.module.css";
-import Avatar from "../../components/Avatar";
+import Avatar from "../../../shared/components/Avatar";
 import { experiences } from "../../../shared/constants/experince";
-import ExperienceList from "../../components/ExperienceList";
-import ProjectList from "../../components/ProjectList";
+import ExperienceList from "../../../shared/components/ExperienceList";
+import ProjectList from "../../../shared/components/ProjectList";
 import { projects } from "../../../shared/constants/project";
 import { posts } from "../../../shared/constants/post";
-import PostList from "../../components/PostList";
+import PostList from "../../../shared/components/PostList";
 
 export default function HomePage() {
   const navigate = useNavigate();

@@ -1,10 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../../shared/components/PageTitle";
 import { profile } from "../../../shared/constants/profile";
-import Tabs from "../../components/Tabs";
+import Tabs from "../../../shared/components/Tabs";
 import { useMemo } from "react";
 import { getSearchParam, setSearchParam } from "../../../shared/utils/url";
-import ProjectList from "../../components/ProjectList";
+import ProjectList from "../../../shared/components/ProjectList";
 import { projects } from "../../../shared/constants/project";
 
 export default function ProjectsPage() {

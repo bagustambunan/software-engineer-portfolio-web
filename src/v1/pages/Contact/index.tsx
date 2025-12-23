@@ -1,8 +1,8 @@
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../../shared/components/PageTitle";
 import { links } from "../../../shared/constants/link";
-import LinkList from "../../components/LinkList";
+import LinkList from "../../../shared/components/LinkList";
 import { LinkType } from "../../../shared/constants/types";
-import Section from "../../components/Section";
+import Section from "../../../shared/components/Section";
 
 export default function ContactPage() {
   return (

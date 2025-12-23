@@ -8,3 +8,7 @@ export function setSearchParam(searchParamsString: string, param: string, value:
   searchParams.set(param, value)
   return searchParams.toString()
 }
+
+export function getVersion() {
+  return location.pathname.includes("v1") ? "v1" : "v2";
+}

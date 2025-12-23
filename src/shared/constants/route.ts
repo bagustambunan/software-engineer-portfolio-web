@@ -1,3 +1,5 @@
+import { getVersion } from "../utils/url";
+
 const routes = {
   home: "/",
   projects: "/projects",
@@ -5,7 +7,13 @@ const routes = {
   achievements: "/achievements",
   contact: "/contact",
   resume: "/resume",
-  fizzBuzz: "/fizz-buzz",
 };
+
+const version = getVersion();
+if (version === "v1") {
+  Object.keys(routes).forEach((key) => {
+    Object.assign(routes, { [key]: `/v1${routes[key as keyof typeof routes]}` });
+  });
+}
 
 export default routes;

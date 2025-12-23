@@ -1,6 +1,6 @@
-import OpenSourceContributionList from "../../components/OpenSourceContributionList";
-import PageTitle from "../../components/PageTitle";
-import Tabs from "../../components/Tabs";
+import OpenSourceContributionList from "../../../shared/components/OpenSourceContributionList";
+import PageTitle from "../../../shared/components/PageTitle";
+import Tabs from "../../../shared/components/Tabs";
 import { openSourceContributions } from "../../../shared/constants/openSouceContribution";
 
 export default function AchievementsPage() {

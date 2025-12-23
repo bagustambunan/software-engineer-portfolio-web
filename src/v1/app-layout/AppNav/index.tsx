@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./style.module.css";
 import { profile } from "../../../shared/constants/profile";
 import { bottomNavigations, topNavigations } from "../../../shared/constants/navigation";
+import routes from "../../../shared/constants/route";
 
 export default function AppNav() {
   const location = useLocation();
@@ -9,7 +10,7 @@ export default function AppNav() {
 
   return (
     <header className={styles.header}>
-      <Link to="/">
+      <Link to={routes.home}>
         <div className={styles.appTitle}>
           <h2>{profile.name}</h2>
           <p>{profile.shortDescription}</p>

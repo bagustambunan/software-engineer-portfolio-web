@@ -1,8 +1,8 @@
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../../shared/components/PageTitle";
 import { experiences } from "../../../shared/constants/experince";
-import ExperienceList from "../../components/ExperienceList";
+import ExperienceList from "../../../shared/components/ExperienceList";
 import { profile } from "../../../shared/constants/profile";
-import Tabs from "../../components/Tabs";
+import Tabs from "../../../shared/components/Tabs";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getSearchParam, setSearchParam } from "../../../shared/utils/url";
 import { useMemo } from "react";
