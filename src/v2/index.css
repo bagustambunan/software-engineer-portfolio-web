@@ -123,6 +123,9 @@ hi, h2, h3, h4, h5, h6, p {
   font-weight: 600;
   color: var(--text-color);
   cursor: default;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .window-actions {

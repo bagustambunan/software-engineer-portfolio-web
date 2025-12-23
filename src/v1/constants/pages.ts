@@ -18,7 +18,7 @@ export const pages: PageConfig[] = [
     component: lazy(() => import("../../shared/pages/Experiences")),
   },
   {
-    title: "ProudProjects",
+    title: "Proud Projects",
     icon: "📝",
     description: "List of projects I'm proud of.",
     route: routes.projects,
