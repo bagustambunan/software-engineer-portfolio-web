@@ -78,6 +78,7 @@ export default function Window({
       >
         <div
           className="window-header"
+          onDoubleClick={() => setIsFullScreen((prev) => !prev)}
           onMouseDown={isFullScreen ? undefined : handleMouseDown}
           onTouchStart={isFullScreen ? undefined : handleTouchStart}
         >
@@ -87,7 +88,7 @@ export default function Window({
               className="maximize-button"
               onClick={() => setIsFullScreen((prev) => !prev)}
             >
-              {isFullScreen ? "-" : "[]"}
+              {isFullScreen ? "-" : "☐"}
             </button>
             <button
               className={`${closable ? "close-button" : "button-disabled"}`}
