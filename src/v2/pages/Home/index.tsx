@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { profile } from "../../../shared/constants/profile";
-import Button from "../../../shared/components/Button";
 import routes from "../../../shared/constants/route";
 import useWindowNavigate from "../../hooks/useWindowNavigate";
 import Avatar from "../../../shared/components/Avatar";
+import Folder from "../../components/Folder";
 
 export default function HomePage() {
   const contactWindow = useWindowNavigate(routes.contact);
@@ -17,16 +17,16 @@ export default function HomePage() {
       {profile.longDescription}
       <div className="horizontal-container">
         <Link to={routes.experiences}>
-          <Button onClick={experiencesWindow.open}>💼 Experiences</Button>
+          <Folder onOpen={experiencesWindow.open}>💼 Experiences</Folder>
         </Link>
         <Link to={routes.projects}>
-          <Button onClick={projectsWindow.open}>📝 Projects</Button>
+          <Folder onOpen={projectsWindow.open}>📝 Projects</Folder>
         </Link>
         <Link to={routes.achievements}>
-          <Button onClick={achievementsWindow.open}>🏆 Achievements</Button>
+          <Folder onOpen={achievementsWindow.open}>🏆 Achievements</Folder>
         </Link>
         <Link to={routes.contact}>
-          <Button onClick={contactWindow.open}>💬 Contact Me</Button>
+          <Folder onOpen={contactWindow.open}>💬 Contact Me</Folder>
         </Link>
       </div>
     </div>
