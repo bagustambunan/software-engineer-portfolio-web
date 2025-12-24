@@ -5,7 +5,7 @@ const useWindowNavigate = (windowKey: string) => {
   const { windows } = useAppSelector((state) => state.windows);
   const dispatch = useAppDispatch();
 
-  const open = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const open = (e: React.MouseEvent) => {
     e.preventDefault();
     dispatch(openWindow(windowKey));
   };

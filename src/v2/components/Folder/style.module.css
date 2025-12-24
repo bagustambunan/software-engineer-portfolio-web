@@ -1,7 +1,7 @@
 .folderContainer {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0px;
   justify-content: center;
   background-color: transparent;
   border: none;
@@ -38,6 +38,8 @@
     flex-direction: row;
     align-items: center;
     padding-bottom: 2px;
+    gap: 4px;
+    padding: 4px;
   }
   .folderIcon {
     width: 24px;

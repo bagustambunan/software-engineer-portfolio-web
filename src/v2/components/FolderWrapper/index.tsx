@@ -7,7 +7,7 @@ export default function FolderWrapper({
 }: {
   folders: {
     href?: string;
-    onOpen?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    onOpen?: (e: React.MouseEvent) => void;
     children: React.ReactNode;
   }[];
 }) {

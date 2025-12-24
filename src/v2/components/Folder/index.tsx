@@ -11,17 +11,17 @@ export default function Folder({
 }: {
   isActive: boolean;
   href?: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  onOpen?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent) => void;
+  onOpen?: (e: React.MouseEvent) => void;
 } & React.PropsWithChildren) {
   const content = (
-    <button
+    <div
       onClick={onClick}
       onDoubleClick={onOpen}
       onKeyDown={(e) => {
         if (isActive) {
           if (e.key === "Enter") {
-            onOpen?.(e as unknown as React.MouseEvent<HTMLButtonElement>);
+            onOpen?.(e as unknown as React.MouseEvent);
           }
         }
       }}
@@ -29,7 +29,7 @@ export default function Folder({
     >
       <Image src="/images/folder.png" className={styles.folderIcon} />
       <div className={styles.folderContent}>{children}</div>
-    </button>
+    </div>
   );
 
   if (href) {
