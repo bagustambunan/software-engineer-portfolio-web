@@ -133,6 +133,7 @@ hi, h2, h3, h4, h5, h6, p {
 .window-actions {
   display: flex;
   flex-direction: row;
+  gap: 8px;
 }
 
 .window-actions button {
@@ -150,6 +151,14 @@ hi, h2, h3, h4, h5, h6, p {
 .button-disabled {
   cursor: not-allowed !important;
   opacity: 0.5;
+}
+
+.maximize-button {
+  background-color: rgb(255, 204, 103);
+}
+
+.maximize-button:hover {
+  background-color: rgb(227, 174, 75);
 }
 
 .close-button {
@@ -170,6 +179,14 @@ hi, h2, h3, h4, h5, h6, p {
 
 .full-height {
   height: calc(100vh - var(--app-padding) * 2);
+}
+
+.full-screen {
+  max-width: 100vw;
+  width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+  resize: none;
 }
 
 .hidden {

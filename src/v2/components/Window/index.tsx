@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useDrag } from "../../hooks/useDrag";
 import { useAppDispatch } from "../../redux/hooks";
 import { closeWindow } from "../../redux/slices/windowsSlice";
@@ -37,8 +37,10 @@ export default function Window({
   const draggableRef = useRef<HTMLDivElement>(null);
   const { position, handleMouseDown, handleTouchStart } = useDrag({
     ref: draggableRef,
-    allowAllPositions
+    allowAllPositions,
   });
+
+  const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
   const handleClose = () => {
     if (!closable) {
@@ -54,24 +56,39 @@ export default function Window({
     <div
       className="window-container"
       ref={draggableRef}
-      style={{
-        top: position?.y,
-        left: position?.x,
-      }}
+      style={
+        isFullScreen
+          ? {
+              top: 0,
+              left: 0,
+            }
+          : {
+              top: position?.y,
+              left: position?.x,
+            }
+      }
     >
       <div
         className={`window-body${
           customStyle?.other?.fullWidth ? " full-width" : ""
-        }${customStyle?.other?.fullHeight ? " full-height" : ""}`}
+        }${customStyle?.other?.fullHeight ? " full-height" : ""}${
+          isFullScreen ? " full-screen" : ""
+        }`}
         style={customStyle?.window}
       >
         <div
           className="window-header"
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
+          onMouseDown={isFullScreen ? undefined : handleMouseDown}
+          onTouchStart={isFullScreen ? undefined : handleTouchStart}
         >
           <div className="window-title">{title}</div>
           <div className="window-actions">
+            <button
+              className="maximize-button"
+              onClick={() => setIsFullScreen((prev) => !prev)}
+            >
+              {isFullScreen ? "-" : "[]"}
+            </button>
             <button
               className={`${closable ? "close-button" : "button-disabled"}`}
               onClick={handleClose}
