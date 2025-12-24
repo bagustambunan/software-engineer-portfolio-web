@@ -19,6 +19,7 @@ interface WindowProps {
     };
   };
   onClose?: () => void;
+  allowAllPositions?: boolean;
 }
 
 export default function Window({
@@ -29,12 +30,14 @@ export default function Window({
   closable = true,
   customStyle,
   onClose,
+  allowAllPositions = false,
 }: React.PropsWithChildren<WindowProps>) {
   const dispatch = useAppDispatch();
 
   const draggableRef = useRef<HTMLDivElement>(null);
   const { position, handleMouseDown, handleTouchStart } = useDrag({
     ref: draggableRef,
+    allowAllPositions
   });
 
   const handleClose = () => {

@@ -8,9 +8,11 @@ import { useCallback, useEffect, useRef, useState } from "react";
 export const useDrag = ({
   ref,
   calculateFor = "topLeft",
+  allowAllPositions = false,
 }: {
   ref: React.RefObject<any>;
   calculateFor?: "topLeft" | "bottomRight";
+  allowAllPositions?: boolean;
 }) => {
   const [dragInfo, setDragInfo] = useState<
     | {
@@ -57,11 +59,15 @@ export const useDrag = ({
       }
 
       setFinalPosition({
-        x: Math.min(Math.max(0, x), window.innerWidth - width),
-        y: Math.min(Math.max(0, y), window.innerHeight - height),
+        x: allowAllPositions
+          ? x
+          : Math.min(Math.max(0, x), window.innerWidth - width),
+        y: allowAllPositions
+          ? y
+          : Math.min(Math.max(0, y), window.innerHeight - height),
       });
     },
-    [calculateFor]
+    [calculateFor, allowAllPositions]
   );
 
   const startDrag = useCallback(
