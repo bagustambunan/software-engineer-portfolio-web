@@ -7,5 +7,10 @@ export default function Image({
   src?: string;
 } & React.ImgHTMLAttributes<HTMLImageElement>) {
   const version = getVersion();
-  return <img src={`${version === "v1" ? "../" : ""}${src}`} {...props} />;
+  return (
+    <img
+      src={`${version === "v1" && src?.startsWith("/") ? "../" : ""}${src}`}
+      {...props}
+    />
+  );
 }

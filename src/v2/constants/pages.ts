@@ -12,13 +12,6 @@ export const pages: PageConfig[] = [
     component: lazy(() => import("../pages/Home")),
   },
   {
-    windowKey: routes.contact,
-    title: "Contact",
-    icon: "💬",
-    route: routes.contact,
-    component: lazy(() => import("../../shared/pages/Contact")),
-  },
-  {
     windowKey: routes.experiences,
     title: "Experiences",
     icon: "💼",
@@ -31,5 +24,19 @@ export const pages: PageConfig[] = [
     icon: "📝",
     route: routes.projects,
     component: lazy(() => import("../../shared/pages/Projects")),
+  },
+  {
+    windowKey: routes.achievements,
+    title: "Achievements",
+    icon: "🏆",
+    route: routes.achievements,
+    component: lazy(() => import("../../shared/pages/Achievements")),
+  },
+  {
+    windowKey: routes.contact,
+    title: "Contact",
+    icon: "💬",
+    route: routes.contact,
+    component: lazy(() => import("../../shared/pages/Contact")),
   },
 ];

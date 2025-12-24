@@ -9,6 +9,7 @@ export default function HomePage() {
   const contactWindow = useWindowNavigate(routes.contact);
   const experiencesWindow = useWindowNavigate(routes.experiences);
   const projectsWindow = useWindowNavigate(routes.projects);
+  const achievementsWindow = useWindowNavigate(routes.achievements);
 
   return (
     <div className="container">
@@ -20,6 +21,9 @@ export default function HomePage() {
         </Link>
         <Link to={routes.projects}>
           <Button onClick={projectsWindow.open}>📝 Projects</Button>
+        </Link>
+        <Link to={routes.achievements}>
+          <Button onClick={achievementsWindow.open}>🏆 Achievements</Button>
         </Link>
         <Link to={routes.contact}>
           <Button onClick={contactWindow.open}>💬 Contact Me</Button>
