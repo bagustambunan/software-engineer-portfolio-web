@@ -11,9 +11,24 @@ export default function FolderWrapper({
     children: React.ReactNode;
   }[];
 }) {
-  const [activeFolderIndex, setActiveFolderIndex] = useState(0);
+  const [activeFolderIndex, setActiveFolderIndex] = useState<number>();
   return (
-    <div className={styles.folderWrapper}>
+    <div
+      className={styles.folderWrapper}
+      onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
+        console.log(e.key, activeFolderIndex);
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          setActiveFolderIndex((prev) =>
+            prev !== undefined ? Math.min(prev + 1, folders.length - 1) : 0
+          );
+        }
+        if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          setActiveFolderIndex((prev) =>
+            prev !== undefined ? Math.max(prev - 1, 0) : folders.length - 1
+          );
+        }
+      }}
+    >
       {folders.map((folder, index) => (
         <Folder
           key={`folder-${index}`}
@@ -21,7 +36,7 @@ export default function FolderWrapper({
           href={folder.href}
           onClick={(e) => {
             e.preventDefault();
-            setActiveFolderIndex(index)
+            setActiveFolderIndex(index);
           }}
           onOpen={folder.onOpen}
         >

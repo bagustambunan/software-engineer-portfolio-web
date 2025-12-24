@@ -18,6 +18,13 @@ export default function Folder({
     <button
       onClick={onClick}
       onDoubleClick={onOpen}
+      onKeyDown={(e) => {
+        if (isActive) {
+          if (e.key === "Enter") {
+            onOpen?.(e as unknown as React.MouseEvent<HTMLButtonElement>);
+          }
+        }
+      }}
       className={`${styles.folderContainer} ${isActive ? styles.clicked : ""}`}
     >
       <Image src="/images/folder.png" className={styles.folderIcon} />

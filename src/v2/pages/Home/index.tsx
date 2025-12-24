@@ -20,22 +20,22 @@ export default function HomePage() {
             {
               href: routes.experiences,
               onOpen: experiencesWindow.open,
-              children: "💼 Experiences",
+              children: "Experiences",
             },
             {
               href: routes.projects,
               onOpen: projectsWindow.open,
-              children: "📝 Projects",
+              children: "Projects",
             },
             {
               href: routes.achievements,
               onOpen: achievementsWindow.open,
-              children: "🏆 Achievements",
+              children: "Achievements",
             },
             {
               href: routes.contact,
               onOpen: contactWindow.open,
-              children: "💬 Contact Me",
+              children: "Contact Me",
             },
           ]}
         />
