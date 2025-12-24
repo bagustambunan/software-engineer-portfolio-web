@@ -8,7 +8,6 @@ import {
   linuxServerStack,
   microsoftSqlStack,
   nextJsStack,
-  playwrightStack,
   reactStack,
   redisStack,
   rubyOnRailsStack,
@@ -22,7 +21,33 @@ export const experiences: Experience[] = [
     role: RoleEnum.SOFTWARE_ENGINEER,
     company: "Sea Labs Indonesia",
     logo: "images/icon-company.png",
-    position: "Frontend Engineer",
+    position: "Software Engineer - Full Stack",
+    details: [
+      {
+        descriptions: [
+          "Work as a full stack engineer with a primary focus on frontend development while handling backend tasks when needed.",
+          "Build and maintain internal tools for the Marketplace Order team, including user-facing features and supporting backend logic.",
+          "Improve engineering practices through documentation, shared components, and regular code reviews.",
+        ],
+      },
+    ],
+    stacks: [
+      expressJsStack,
+      golangStack,
+      redisStack,
+      reactStack,
+      vueStack,
+      typescriptStack,
+      nextJsStack,
+    ],
+    startDate: new Date("2025-09-01"),
+    highlighted: true,
+  },
+  {
+    role: RoleEnum.SOFTWARE_ENGINEER,
+    company: "Sea Labs Indonesia",
+    logo: "images/icon-company.png",
+    position: "Software Engineer - Front End",
     details: [
       {
         descriptions: [
@@ -31,20 +56,12 @@ export const experiences: Experience[] = [
           "Developed reusable components and automation tools that streamlined deployment and testing processes across teams.",
           "Led internal research initiatives to boost team productivity, improve codebase consistency, and modernize tools through standardized UI patterns and new library adoption.",
           "Handled error reports, bug fixes, and provided on-call support.",
-          "Occasionally supported backend and DevOps tasks to ensure smooth system performance.",
         ],
       },
     ],
-    stacks: [
-      reactStack,
-      vueStack,
-      redisStack,
-      typescriptStack,
-      nextJsStack,
-      expressJsStack,
-      playwrightStack,
-    ],
+    stacks: [reactStack, vueStack, typescriptStack, nextJsStack],
     startDate: new Date("2022-12-01"),
+    endDate: new Date("2025-08-31"),
     highlighted: true,
   },
   {
@@ -70,7 +87,6 @@ export const experiences: Experience[] = [
         descriptions: [
           "Designed, developed, and published multiple entertainment apps on the Play Store, reaching over 1M+ downloads.",
           "Managed all stages of the app lifecycle, from concept to release and maintenance.",
-          "Implemented AdMob integration and optimized monetization performance.",
           "Portfolio: https://play.google.com/store/apps/dev?id=4922219957373722461",
         ],
       },

@@ -14,32 +14,39 @@ export default function HomePage() {
     <div className="container">
       <Avatar />
       {profile.longDescription}
-      <div className="horizontal-container">
-        <FolderWrapper
-          folders={[
-            {
-              href: routes.experiences,
-              onOpen: experiencesWindow.open,
-              children: "Experiences",
-            },
-            {
-              href: routes.projects,
-              onOpen: projectsWindow.open,
-              children: "Projects",
-            },
-            {
-              href: routes.achievements,
-              onOpen: achievementsWindow.open,
-              children: "Achievements",
-            },
-            {
-              href: routes.contact,
-              onOpen: contactWindow.open,
-              children: "Contact",
-            },
-          ]}
-        />
-      </div>
+      <FolderWrapper
+        folders={[
+          {
+            href: routes.experiences,
+            onOpen: experiencesWindow.open,
+            children: "Experiences",
+          },
+          {
+            href: routes.projects,
+            onOpen: projectsWindow.open,
+            children: "Projects",
+          },
+          {
+            href: routes.achievements,
+            onOpen: achievementsWindow.open,
+            children: "Achievements",
+          },
+          {
+            href: routes.contact,
+            onOpen: contactWindow.open,
+            children: "Contact",
+          },
+        ]}
+      />
+      {/* {profile.details?.map((detail) => (
+        <Section title={detail.title}>
+          {Array.isArray(detail.content) ? (
+            detail.content?.map((content) => <div>{content}</div>)
+          ) : (
+            <div>{detail.content}</div>
+          )}
+        </Section>
+      ))} */}
     </div>
   );
 }

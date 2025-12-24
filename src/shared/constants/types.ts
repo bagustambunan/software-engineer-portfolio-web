@@ -7,7 +7,7 @@ export type Profile = {
   photo: string;
   details?: {
     title: string;
-    content: ReactNode;
+    content?: ReactNode | ReactNode[];
   }[];
   roles: Role[];
 };

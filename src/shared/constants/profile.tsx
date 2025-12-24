@@ -17,4 +17,14 @@ export const profile: Profile = {
       emoji: "🎨",
     },
   ],
+  details: [
+    {
+      title: "Skills",
+      content: [
+        "Frontend Web Development: React, Vue, Next Js",
+        "Backend Development: Ruby on Rails, Golang, Express Js",
+        "Mobile Development: Java, Swift"
+      ]
+    }
+  ]
 };
