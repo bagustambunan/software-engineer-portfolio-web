@@ -1,0 +1,12 @@
+.folderWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .folderWrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

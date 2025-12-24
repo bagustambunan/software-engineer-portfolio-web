@@ -9,6 +9,7 @@
   padding-bottom: 8px;
   border-radius: 8px;
   width: 120px;
+  border: 2px solid transparent;
 }
 
 .folderContainer:hover {
@@ -27,5 +28,27 @@
 }
 
 .clicked {
-  border: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .folderContainer {
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 2px;
+  }
+  .folderIcon {
+    width: 24px;
+    height: 24px;
+  }
+  .folderContent {
+    text-align: left;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .folderContainer {
+    width: 100px;
+  }
 }
