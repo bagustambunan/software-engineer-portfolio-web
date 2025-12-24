@@ -27,6 +27,7 @@ export default function Layout() {
           }
         }}
         customStyle={{ other: { fullWidth: true } }}
+        allowAllPositions={true}
       >
         <Outlet />
       </Window>
