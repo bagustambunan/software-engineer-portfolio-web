@@ -1,0 +1,42 @@
+import { lazy } from "react";
+import { profile } from "../../shared/constants/profile";
+import routes from "../../shared/constants/route";
+import type { PageConfig } from "./types";
+
+export const pages: PageConfig[] = [
+  {
+    windowKey: "home",
+    title: profile.name,
+    icon: "🏠",
+    route: routes.home,
+    component: lazy(() => import("../pages/Home")),
+  },
+  {
+    windowKey: routes.experiences,
+    title: "Experiences",
+    icon: "💼",
+    route: routes.experiences,
+    component: lazy(() => import("../../shared/pages/Experiences")),
+  },
+  {
+    windowKey: routes.projects,
+    title: "Projects",
+    icon: "📝",
+    route: routes.projects,
+    component: lazy(() => import("../../shared/pages/Projects")),
+  },
+  {
+    windowKey: routes.achievements,
+    title: "Achievements",
+    icon: "🏆",
+    route: routes.achievements,
+    component: lazy(() => import("../../shared/pages/Achievements")),
+  },
+  {
+    windowKey: routes.contact,
+    title: "Contact",
+    icon: "💬",
+    route: routes.contact,
+    component: lazy(() => import("../../shared/pages/Contact")),
+  },
+];

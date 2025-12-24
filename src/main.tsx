@@ -1,33 +1,53 @@
-import { lazy, StrictMode, Suspense } from "react";
+import { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./index.css";
-import routes from "./constants/route";
-import Layout from "./app-layout/Layout";
-import Avatar from "./components/Avatar";
+import { Provider } from "react-redux";
+import { store } from "./v2/redux/store";
+import Avatar from "./shared/components/Avatar";
+import LayoutV1 from "./v1/app-layout/Layout";
+import LayoutV2 from "./v2/app-layout/Layout";
+import { pages as pagesV1 } from "./v1/constants/pages";
+import { pages as pagesV2 } from "./v2/constants/pages";
+import { getVersion } from "./shared/utils/url";
 
-const HomePage = lazy(() => import("./pages/Home"));
-const ExperiencesPage = lazy(() => import("./pages/Experiences"));
-const ProjectPage = lazy(() => import("./pages/Projects"));
-const AchievementsPage = lazy(() => import("./pages/Achievements"));
-const ContactPage = lazy(() => import("./pages/Contact"));
-const ResumePage = lazy(() => import("./pages/Resume"));
+const version = getVersion();
+if (getVersion() === "v1") {
+  import("./v1/index.css");
+} else if (version === "v2") {
+  import("./v2/index.css");
+}
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
       <Suspense fallback={<Avatar />}>
         <Routes>
-          <Route path={routes.resume} element={<ResumePage />} />
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path={routes.projects} element={<ProjectPage />} />
-            <Route path={routes.experiences} element={<ExperiencesPage />} />
-            <Route path={routes.achievements} element={<AchievementsPage />} />
-            <Route path={routes.contact} element={<ContactPage />} />
+          <Route path="/">
+            {version === "v1" && (
+              <Route path="/v1" element={<LayoutV1 />}>
+                {pagesV1.map((page) => (
+                  <Route
+                    key={page.route}
+                    path={page.route.replace("/v1/", "")}
+                    element={<page.component />}
+                  />
+                ))}
+              </Route>
+            )}
+            {version === "v2" && (
+              <Route path="/" element={<LayoutV2 />}>
+                {pagesV2.map((page) => (
+                  <Route
+                    key={page.windowKey}
+                    path={page.route.replace("/", "")}
+                    element={<page.component />}
+                  />
+                ))}
+              </Route>
+            )}
           </Route>
         </Routes>
       </Suspense>
     </BrowserRouter>
-  </StrictMode>
+  </Provider>
 );
