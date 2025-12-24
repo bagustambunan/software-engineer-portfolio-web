@@ -35,7 +35,7 @@ export default function HomePage() {
             {
               href: routes.contact,
               onOpen: contactWindow.open,
-              children: "Contact Me",
+              children: "Contact",
             },
           ]}
         />

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 0px;
   justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -17,7 +18,7 @@
 }
 
 .folderIcon {
-  width: 100%;
+  width: 80%;
 }
 
 .folderContent {
