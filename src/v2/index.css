@@ -105,6 +105,8 @@ hi, h2, h3, h4, h5, h6, p {
 
   max-width: calc(100vw - var(--app-padding) * 2);
   max-height: calc(100vh - var(--app-padding) * 2);
+
+  transition: all 0.3s ease;
 }
 
 .window-header {
