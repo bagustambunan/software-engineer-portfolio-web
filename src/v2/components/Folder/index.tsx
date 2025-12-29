@@ -1,5 +1,6 @@
 import Image from "../../../shared/components/Image";
 import { Link } from "react-router-dom";
+import styles from "./style.module.css";
 
 export default function Folder({
   children,
@@ -24,10 +25,10 @@ export default function Folder({
           }
         }
       }}
-      className={`folder-container ${isActive ? "clicked" : ""}`}
+      className={`${styles.folderContainer} ${isActive ? styles.clicked : ""}`}
     >
-      <Image src="/images/folder.png" className="folder-icon" />
-      <div className="folder-content">{children}</div>
+      <Image src="/images/folder.png" className={styles.folderIcon} />
+      <div className={styles.folderContent}>{children}</div>
     </div>
   );
 

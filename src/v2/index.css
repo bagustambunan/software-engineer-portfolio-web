@@ -34,30 +34,12 @@
   body {
     margin-bottom: 64px !important;
   }
-  .folder-container {
-    width: fit-content;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 2px;
-    gap: 4px;
-    padding: 4px;
-  }
-  .folder-icon {
-    width: 24px;
-    height: 24px;
-  }
-  .folder-content {
-    text-align: left;
-  }
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
   :root {
     --app-padding: 48px;
     --carousel-padding: 24px;
-  }
-  .folder-container {
-    width: 100px;
   }
 }
 
@@ -212,39 +194,4 @@ hi, h2, h3, h4, h5, h6, p {
 
 .hidden {
   display: none;
-}
-
-.folder-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding-bottom: 8px;
-  border-radius: 8px;
-  width: 120px;
-  border: 2px solid transparent;
-}
-
-.folder-container:hover {
-  background-color: var(--hover-color);
-}
-
-.folder-icon {
-  width: 80%;
-}
-
-.folder-content {
-  font-weight: 500;
-  color: var(--text-color);
-  font-size: 1em;
-  text-align: center;
-  text-wrap: balance;
-}
-
-.clicked {
-  border-color: var(--primary-color);
 }
