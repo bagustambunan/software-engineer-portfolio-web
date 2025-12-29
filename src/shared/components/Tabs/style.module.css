@@ -8,6 +8,5 @@
 
 .activeTab {
   border: 2px solid var(--primary-color) !important;
-  padding: 8px 16px;
   border-radius: 8px;
 }

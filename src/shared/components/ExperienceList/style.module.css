@@ -1,8 +1,13 @@
+.experienceListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .experienceContainer {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-bottom: 64px;
 }
 
 .experienceLogoContainer {
