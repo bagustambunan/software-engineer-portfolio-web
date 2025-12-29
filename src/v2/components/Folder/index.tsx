@@ -16,7 +16,7 @@ export default function Folder({
 } & React.PropsWithChildren) {
   const content = (
     <div
-      onClick={onClick}
+      onClick={isActive ? onOpen : onClick}
       onDoubleClick={onOpen}
       onKeyDown={(e) => {
         if (isActive) {
