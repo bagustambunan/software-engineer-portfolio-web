@@ -9,6 +9,7 @@
   --hover-color: rgba(0, 0, 0, 0.1);
 
   --app-padding: 72px;
+  --menu-width: 160px;
   --font-size: 1em;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,6 +30,7 @@
 @media (max-width: 600px) {
   :root {
     --app-padding: 16px;
+    --menu-width: 0px;
     --carousel-padding: 8px;
   }
   body {
@@ -39,6 +41,7 @@
 @media (min-width: 601px) and (max-width: 1000px) {
   :root {
     --app-padding: 48px;
+    --menu-width: 120px;
     --carousel-padding: 24px;
   }
 }
@@ -98,13 +101,13 @@ hi, h2, h3, h4, h5, h6, p {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   resize: both;
-  overflow: auto;
+  overflow: hidden;
 
   min-width: 320px;
   min-height: 240px;
 
-  max-width: calc(100vw - var(--app-padding) * 2);
-  max-height: calc(100vh - var(--app-padding) * 2);
+  max-width: calc(100dvw - var(--app-padding) * 2 - var(--menu-width));
+  max-height: calc(100dvh - var(--app-padding) * 2);
 
   transition: all 0.3s ease;
 }
@@ -173,21 +176,22 @@ hi, h2, h3, h4, h5, h6, p {
 
 .window-content {
   padding: 16px;
+  overflow: auto;
 }
 
 .full-width {
-  width: calc(100vw - var(--app-padding) * 2);
+  width: calc(100dvw - var(--app-padding) * 2);
 }
 
 .full-height {
-  height: calc(100vh - var(--app-padding) * 2);
+  height: calc(100dvh - var(--app-padding) * 2);
 }
 
 .full-screen {
-  max-width: 100vw;
-  width: 100vw;
-  max-height: 100vh;
-  height: 100vh;
+  max-width: 100dvw;
+  width: 100dvw;
+  max-height: 100dvh;
+  height: 100dvh;
   resize: none;
 }
 

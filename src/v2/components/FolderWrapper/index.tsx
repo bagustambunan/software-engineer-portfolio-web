@@ -16,7 +16,6 @@ export default function FolderWrapper({
     <div
       className={styles.folderWrapper}
       onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
-        console.log(e.key, activeFolderIndex);
         if (e.key === "ArrowRight" || e.key === "ArrowDown") {
           setActiveFolderIndex((prev) =>
             prev !== undefined ? Math.min(prev + 1, folders.length - 1) : 0

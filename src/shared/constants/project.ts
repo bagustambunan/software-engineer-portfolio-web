@@ -1,4 +1,4 @@
-import { androidStack, pythonStack, swiftStack, swiftUiStack } from "./stack";
+import { androidStudioStack, pythonStack, swiftStack, swiftUiStack } from "./stack";
 import { type Project, RoleEnum } from "./types";
 
 const softwareEngineerProjects: Project[] = [
@@ -63,7 +63,7 @@ const softwareEngineerProjects: Project[] = [
         descriptions: ["This app reached 1M+ downloads on Google Play Store."],
       },
     ],
-    stacks: [androidStack],
+    stacks: [androidStudioStack],
     highlighted: true,
   },
   {

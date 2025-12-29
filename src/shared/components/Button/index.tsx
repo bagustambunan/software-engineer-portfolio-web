@@ -8,12 +8,12 @@ export default function Button({
   className,
 }: {
   key?: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   className?: string;
 } & PropsWithChildren) {
   return (
-    <button key={key} onClick={onClick} className={`${styles.button} ${className}`}>
+    <div key={key} onClick={onClick} className={`${styles.button} ${className}`}>
       {children}
-    </button>
+    </div>
   );
 }

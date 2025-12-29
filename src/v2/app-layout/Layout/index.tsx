@@ -4,6 +4,8 @@ import { pages } from "../../constants/pages";
 import WindowsContainer from "../../components/WindowsContainer";
 import routes from "../../../shared/constants/route";
 import { useEffect } from "react";
+import Menu from "../Menu";
+import styles from "./style.module.css";
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -16,22 +18,26 @@ export default function Layout() {
   }, [page]);
 
   return (
-    <main>
-      <Window
-        windowKey={page.windowKey}
-        title={page.icon + " " + page.title}
-        closable={!isHome}
-        onClose={() => {
-          if (!isHome) {
-            navigate(routes.home);
-          }
-        }}
-        customStyle={{ other: { fullWidth: true } }}
-        allowAllPositions={true}
-      >
-        <Outlet />
-      </Window>
-      <WindowsContainer />
+    <main className={styles.layout}>
+      <div className={styles.layoutMain}>
+        <Window
+          windowKey={page.windowKey}
+          title={page.icon + " " + page.title}
+          closable={!isHome}
+          onClose={() => {
+            if (!isHome) {
+              navigate(routes.home);
+            }
+          }}
+          customStyle={{ other: { fullWidth: true } }}
+        >
+          <Outlet />
+        </Window>
+        <WindowsContainer />
+      </div>
+      <div className={styles.layoutMenu}>
+        <Menu />
+      </div>
     </main>
   );
 }

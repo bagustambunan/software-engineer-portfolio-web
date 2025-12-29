@@ -21,7 +21,6 @@ export default function WindowsContainer() {
             windowKey={window.windowKey}
             title={page.icon + " " + page.title}
             closable={true}
-            allowAllPositions={true}
           >
             <Suspense fallback={null}>
               <PageComponent />

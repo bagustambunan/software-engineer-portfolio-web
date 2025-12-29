@@ -83,7 +83,7 @@ export default function ExperienceList({
     );
   }
   return (
-    <div>
+    <div className={styles.experienceListContainer}>
       {experiences.map((experience, experienceIndex) => (
         <ExperienceItem
           key={`experience-${experienceIndex}`}

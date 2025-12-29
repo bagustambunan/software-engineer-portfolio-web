@@ -1,6 +1,6 @@
 import Image from "../../../shared/components/Image";
-import styles from "./style.module.css";
 import { Link } from "react-router-dom";
+import styles from "./style.module.css";
 
 export default function Folder({
   children,
@@ -16,8 +16,8 @@ export default function Folder({
 } & React.PropsWithChildren) {
   const content = (
     <div
-      onClick={onClick}
-      onDoubleClick={onOpen}
+      onClick={isActive ? onOpen : onClick}
+      // onDoubleClick={onOpen}
       onKeyDown={(e) => {
         if (isActive) {
           if (e.key === "Enter") {
