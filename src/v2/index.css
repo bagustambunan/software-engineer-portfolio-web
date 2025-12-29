@@ -116,7 +116,7 @@ hi, h2, h3, h4, h5, h6, p {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   resize: both;
-  overflow: auto;
+  overflow: hidden;
 
   min-width: 320px;
   min-height: 240px;
@@ -191,6 +191,7 @@ hi, h2, h3, h4, h5, h6, p {
 
 .window-content {
   padding: 16px;
+  overflow: auto;
 }
 
 .full-width {
