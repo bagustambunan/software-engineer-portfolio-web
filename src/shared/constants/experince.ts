@@ -1,5 +1,5 @@
 import {
-  androidStack,
+  androidStudioStack,
   cStack,
   expressJsStack,
   golangStack,
@@ -11,7 +11,6 @@ import {
   reactStack,
   redisStack,
   rubyOnRailsStack,
-  typescriptStack,
   vueStack,
 } from "./stack";
 import { RoleEnum, type Experience } from "./types";
@@ -26,18 +25,16 @@ export const experiences: Experience[] = [
       {
         descriptions: [
           "Work as a full stack engineer with a primary focus on frontend development while handling backend tasks when needed.",
-          "Build and maintain internal tools for the Marketplace Order team, including user-facing features and supporting backend logic.",
-          "Improve engineering practices through documentation, shared components, and regular code reviews.",
+          "Developed and maintained core internal tools for the Marketplace Order team, improving operational efficiency for thousands of internal users across 10+ countries.",
+          "Drive engineering best practices by publishing internal libraries, writing comprehensive documentation, and conducting regular code reviews to ensure code quality.",
         ],
       },
     ],
     stacks: [
-      expressJsStack,
       golangStack,
-      redisStack,
+      expressJsStack,
       reactStack,
       vueStack,
-      typescriptStack,
       nextJsStack,
     ],
     startDate: new Date("2025-09-01"),
@@ -51,15 +48,14 @@ export const experiences: Experience[] = [
     details: [
       {
         descriptions: [
-          "Work as part of Shopee's Marketplace Order Frontend Team, building and maintaining internal web tools used across departments.",
-          "Designed and implemented frontend architectures that enhanced security, observability, and developer efficiency.",
-          "Developed reusable components and automation tools that streamlined deployment and testing processes across teams.",
-          "Led internal research initiatives to boost team productivity, improve codebase consistency, and modernize tools through standardized UI patterns and new library adoption.",
-          "Handled error reports, bug fixes, and provided on-call support.",
+          "Architected and implemented frontend solutions for internal web tools used across multiple departments, enhancing system security and observability.",
+          "Developed custom automation tools and reusable components that streamlined deployment and testing processes across engineering teams.",
+          "Led internal research initiatives to modernization the codebase, successfully driving the adoption of standardized UI patterns and new libraries to boost productivity.",
+          "Resolved critical bugs and provided on-call support to ensure continuous system availability."
         ],
       },
     ],
-    stacks: [reactStack, vueStack, typescriptStack, nextJsStack],
+    stacks: [reactStack, vueStack, nextJsStack],
     startDate: new Date("2022-12-01"),
     endDate: new Date("2025-08-31"),
     highlighted: true,
@@ -85,13 +81,15 @@ export const experiences: Experience[] = [
     details: [
       {
         descriptions: [
-          "Designed, developed, and published multiple entertainment apps on the Play Store, reaching over 1M+ downloads.",
-          "Managed all stages of the app lifecycle, from concept to release and maintenance.",
+          "Designed, engineered, and published multiple entertainment applications on the Google Play Store, achieving over 1 million cumulative downloads.",
+          "Managed the entire application lifecycle (SDLC), from initial concept and UI design to release and post-launch maintenance.",
+          "Optimized app performance to ensure stability across a wide range of Android devices, maintaining a crash-free user rate of >99%.",
+          "Analyzed user feedback and engagement metrics to iterate on features and improve user retention.",
           "Portfolio: https://play.google.com/store/apps/dev?id=4922219957373722461",
         ],
       },
     ],
-    stacks: [androidStack, javaStack],
+    stacks: [androidStudioStack, javaStack],
     startDate: new Date("2020-07-01"),
     endDate: new Date("2022-02-01"),
     highlighted: true,

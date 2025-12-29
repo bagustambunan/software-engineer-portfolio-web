@@ -1,7 +1,7 @@
 import type { Stack } from "./types";
 
-export const androidStack: Stack = {
-  name: "Android",
+export const androidStudioStack: Stack = {
+  name: "Android Studio",
   icon: "images/stack-android.webp",
 };
 
