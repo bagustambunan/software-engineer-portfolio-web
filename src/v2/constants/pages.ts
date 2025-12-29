@@ -34,7 +34,7 @@ export const pages: PageConfig[] = [
   },
   {
     windowKey: routes.contact,
-    title: "Contact",
+    title: "Contact and Links",
     icon: "💬",
     route: routes.contact,
     component: lazy(() => import("../../shared/pages/Contact")),

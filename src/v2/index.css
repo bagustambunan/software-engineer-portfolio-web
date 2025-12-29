@@ -9,6 +9,7 @@
   --hover-color: rgba(0, 0, 0, 0.1);
 
   --app-padding: 72px;
+  --menu-width: 160px;
   --font-size: 1em;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -39,6 +40,7 @@
 @media (min-width: 601px) and (max-width: 1000px) {
   :root {
     --app-padding: 48px;
+    --menu-width: 120px;
     --carousel-padding: 24px;
   }
 }
@@ -103,7 +105,7 @@ hi, h2, h3, h4, h5, h6, p {
   min-width: 320px;
   min-height: 240px;
 
-  max-width: calc(100dvw - var(--app-padding) * 2);
+  max-width: calc(100dvw - var(--app-padding) * 2 - var(--menu-width));
   max-height: calc(100dvh - var(--app-padding) * 2);
 
   transition: all 0.3s ease;

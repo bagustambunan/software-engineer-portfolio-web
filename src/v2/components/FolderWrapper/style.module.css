@@ -1,7 +1,6 @@
 .folderWrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 16px;
 }
 
