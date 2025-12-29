@@ -30,6 +30,7 @@
 @media (max-width: 600px) {
   :root {
     --app-padding: 16px;
+    --menu-width: 0px;
     --carousel-padding: 8px;
   }
   body {

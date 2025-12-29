@@ -6,7 +6,7 @@
 
 @media (max-width: 600px) {
   .folderWrapper {
-    flex-direction: column;
+    flex-direction: row;
     gap: 4px;
   }
 }

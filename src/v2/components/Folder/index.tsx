@@ -17,7 +17,7 @@ export default function Folder({
   const content = (
     <div
       onClick={isActive ? onOpen : onClick}
-      onDoubleClick={onOpen}
+      // onDoubleClick={onOpen}
       onKeyDown={(e) => {
         if (isActive) {
           if (e.key === "Enter") {
