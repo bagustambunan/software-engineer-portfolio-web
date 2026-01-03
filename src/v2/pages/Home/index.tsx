@@ -1,20 +1,28 @@
 import { profile } from "../../../shared/constants/profile";
 import Avatar from "../../../shared/components/Avatar";
+import Button from "../../../shared/components/Button";
+import { Link } from "react-router-dom";
+import { links } from "../../../shared/constants/link";
 
 export default function HomePage() {
   return (
     <div className="container">
       <Avatar />
       {profile.longDescription}
-      {/* {profile.details?.map((detail) => (
-        <Section title={detail.title}>
-          {Array.isArray(detail.content) ? (
-            detail.content?.map((content) => <div>{content}</div>)
-          ) : (
-            <div>{detail.content}</div>
-          )}
-        </Section>
-      ))} */}
+      <div className="horizontal-container">
+        <Link
+          to={links.find((link) => link.name === "LinkedIn")?.link ?? ""}
+          target="_blank"
+        >
+          <Button type="primary">💼 Connect with me on LinkedIn</Button>
+        </Link>
+        <Link
+          to={`mailto:${links.find((link) => link.name === "Email")?.link}`}
+          target="_blank"
+        >
+          📧 Email me
+        </Link>
+      </div>
     </div>
   );
 }

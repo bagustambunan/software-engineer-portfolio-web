@@ -11,3 +11,14 @@
 .button:hover {
   border: 2px solid var(--primary-color);
 }
+
+.primary {
+  background-color: var(--linkedin-color);
+  border: 2px solid var(--linkedin-color);
+  color: var(--background-color);
+}
+
+.primary:hover {
+  background-color: var(--linkedin-color-hover);
+  border: 2px solid var(--linkedin-color-hover);
+}

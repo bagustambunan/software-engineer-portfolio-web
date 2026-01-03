@@ -6,13 +6,15 @@ export default function Button({
   onClick,
   children,
   className,
+  type = "default",
 }: {
   key?: string;
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   className?: string;
+  type?: "default" | "primary";
 } & PropsWithChildren) {
   return (
-    <div key={key} onClick={onClick} className={`${styles.button} ${className}`}>
+    <div key={key} onClick={onClick} className={`${styles.button} ${styles[type]} ${className}`}>
       {children}
     </div>
   );

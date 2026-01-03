@@ -8,6 +8,9 @@
   --button-color: #f9f9f9;
   --hover-color: rgba(0, 0, 0, 0.1);
 
+  --linkedin-color: #0077B5;
+  --linkedin-color-hover: #005689;
+
   --app-padding: 72px;
   --menu-width: 160px;
   --font-size: 1em;
@@ -86,6 +89,7 @@ hi, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  align-items: center;
 }
 
 .window-container {
