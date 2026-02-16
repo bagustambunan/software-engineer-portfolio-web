@@ -39,4 +39,11 @@ export const pages: PageConfig[] = [
     route: routes.contact,
     component: lazy(() => import("../../shared/pages/Contact")),
   },
+  {
+    windowKey: routes.resume,
+    title: "Resume",
+    icon: "📄",
+    route: routes.resume,
+    component: lazy(() => import("../pages/Resume")),
+  },
 ];

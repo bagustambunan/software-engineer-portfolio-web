@@ -3,6 +3,7 @@ import Avatar from "../../../shared/components/Avatar";
 import Button from "../../../shared/components/Button";
 import { Link } from "react-router-dom";
 import { links } from "../../../shared/constants/link";
+import routes from "../../../shared/constants/route";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,9 @@ export default function HomePage() {
           target="_blank"
         >
           📧 Email me
+        </Link>
+        <Link to={routes.resume}>
+          <Button>See my resume</Button>
         </Link>
       </div>
     </div>
