@@ -27,6 +27,7 @@ export const experiences: Experience[] = [
           "Work as a full stack engineer with a primary focus on frontend development while handling backend tasks when needed.",
           "Developed and maintained core internal tools for the Marketplace Order team, improving operational efficiency for thousands of internal users across 10+ countries.",
           "Drive engineering best practices by publishing internal libraries, writing comprehensive documentation, and conducting regular code reviews to ensure code quality.",
+          "Developed multiple MCP servers, custom agent skills, and rule configurations in Cursor to enhance AI-assisted development workflows."
         ],
       },
     ],
