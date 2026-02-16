@@ -6,7 +6,7 @@ export default function Menu() {
   const contactWindow = useWindowNavigate(routes.contact);
   const experiencesWindow = useWindowNavigate(routes.experiences);
   const projectsWindow = useWindowNavigate(routes.projects);
-  const achievementsWindow = useWindowNavigate(routes.achievements);
+  const postsWindow = useWindowNavigate(routes.posts);
   return (
     <FolderWrapper
       folders={[
@@ -21,9 +21,9 @@ export default function Menu() {
           children: "Projects",
         },
         {
-          href: routes.achievements,
-          onOpen: achievementsWindow.open,
-          children: "Achievements",
+          href: routes.posts,
+          onOpen: postsWindow.open,
+          children: "Writings",
         },
         {
           href: routes.contact,

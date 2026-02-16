@@ -26,11 +26,11 @@ export const pages: PageConfig[] = [
     component: lazy(() => import("../../shared/pages/Projects")),
   },
   {
-    windowKey: routes.achievements,
-    title: "Achievements",
-    icon: "🏆",
-    route: routes.achievements,
-    component: lazy(() => import("../../shared/pages/Achievements")),
+    windowKey: routes.posts,
+    title: "Writings",
+    icon: "✍️",
+    route: routes.posts,
+    component: lazy(() => import("../../shared/pages/Posts")),
   },
   {
     windowKey: routes.contact,

@@ -5,6 +5,7 @@ const routes = {
   projects: "/projects",
   experiences: "/experiences",
   achievements: "/achievements",
+  posts: "/posts",
   contact: "/contact",
   resume: "/resume",
 };

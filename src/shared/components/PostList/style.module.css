@@ -1,7 +1,7 @@
 .postListContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .postContainer {
@@ -14,7 +14,6 @@
   width: 240px;
   height: 160px;
   object-fit: cover;
-  border-radius: 10%;
 }
 
 .postContainer > div:last-child {
