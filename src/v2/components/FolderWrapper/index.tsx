@@ -9,6 +9,7 @@ export default function FolderWrapper({
     href?: string;
     onOpen?: (e: React.MouseEvent) => void;
     children: React.ReactNode;
+    type?: "folder" | "file"
   }[];
 }) {
   const [activeFolderIndex, setActiveFolderIndex] = useState<number>();
@@ -38,6 +39,7 @@ export default function FolderWrapper({
             setActiveFolderIndex(index);
           }}
           onOpen={folder.onOpen}
+          type={folder.type}
         >
           {folder.children}
         </Folder>

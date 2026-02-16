@@ -8,11 +8,13 @@ export default function Folder({
   href,
   onClick,
   onOpen,
+  type = "folder",
 }: {
   isActive: boolean;
   href?: string;
   onClick?: (e: React.MouseEvent) => void;
   onOpen?: (e: React.MouseEvent) => void;
+  type?: "folder" | "file"
 } & React.PropsWithChildren) {
   const content = (
     <div
@@ -27,7 +29,7 @@ export default function Folder({
       }}
       className={`${styles.folderContainer} ${isActive ? styles.clicked : ""}`}
     >
-      <Image src="/images/folder.png" className={styles.folderIcon} />
+      <Image src={type === "folder" ? "/images/folder.png" : "/images/file.png"} className={styles.folderIcon} />
       <div className={styles.folderContent}>{children}</div>
     </div>
   );

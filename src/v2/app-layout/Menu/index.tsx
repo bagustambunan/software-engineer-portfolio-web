@@ -7,6 +7,7 @@ export default function Menu() {
   const experiencesWindow = useWindowNavigate(routes.experiences);
   const projectsWindow = useWindowNavigate(routes.projects);
   const postsWindow = useWindowNavigate(routes.posts);
+  const resumeWindow = useWindowNavigate(routes.resume);
   return (
     <FolderWrapper
       folders={[
@@ -29,6 +30,12 @@ export default function Menu() {
           href: routes.contact,
           onOpen: contactWindow.open,
           children: "Contact and Links",
+        },
+        {
+          href: routes.resume,
+          onOpen: resumeWindow.open,
+          children: "Resume",
+          type: "file",
         },
       ]}
     />
