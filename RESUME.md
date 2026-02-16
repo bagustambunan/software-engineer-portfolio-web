@@ -16,9 +16,9 @@ Software Engineer with 3+ years of professional experience specializing in front
 
 - **Frontend:** React, Vue, Next.js, TypeScript, JavaScript, HTML5, CSS3
 - **Backend:** Golang, Express.js, Ruby on Rails, REST APIs
-- **Mobile:** Android (Java), iOS (Swift, SwiftUI)
-- **Testing:** Playwright, End-to-End Testing
-- **Tools:** Git, Webpack, Redis, Linux Server, Microsoft SQL Server
+- **Mobile:** Android (Java, Kotlin, Jetpack Compose), iOS (Swift, SwiftUI)
+- **Testing:** Playwright, Cypress, End-to-End Testing
+- **Tools:** Git, Webpack, Redis, Linux Server
 
 ---
 
@@ -51,16 +51,6 @@ Software Engineer with 3+ years of professional experience specializing in front
 
 ---
 
-### Junior Engineer (Training Program)
-
-**Sea Labs Indonesia (Shopee)** | Jun 2022 – Nov 2022
-
-- Completed a 6-month intensive training program covering full-stack web development fundamentals, software engineering best practices, and production-level coding standards.
-
-**Tech stack:** React, Golang, Redis
-
----
-
 ### Android Developer (Self-employed)
 
 **Duduu Studio** | Jul 2020 – Feb 2022
@@ -73,94 +63,3 @@ Software Engineer with 3+ years of professional experience specializing in front
 **Portfolio:** [Google Play Developer Page](https://play.google.com/store/apps/dev?id=4922219957373722461)
 
 **Tech stack:** Android Studio, Java
-
----
-
-### Application Developer Intern
-
-**Nutrifood** | Jul 2021 – Dec 2021
-
-- Built and maintained internal business applications as a full-stack developer using Ruby on Rails, JavaScript, and Microsoft SQL Server.
-- Collaborated with cross-functional teams to scope, design, and deliver features used by multiple departments.
-
-**Tech stack:** Ruby on Rails, JavaScript, Linux Server, Microsoft SQL Server
-
----
-
-### Laboratory Assistant
-
-**University of North Sumatra** | Feb 2020 – Jan 2021
-
-- Taught Advanced Object-Oriented Programming (Java) and Programming Basics (C) to college students.
-- Prepared course materials, delivered lectures, mentored students on assignments, and evaluated performance through quizzes and examinations.
-
-**Tech stack:** Java, C
-
----
-
-## Projects
-
-### Sticker iOS
-
-A native iOS app built with Swift and SwiftUI that lets users browse, search, and add sticker packs to WhatsApp or WhatsApp Business.
-
-- Support for both static and animated stickers
-- Search, filter, and favorites system for sticker packs
-- Popular sticker packs and detailed character pages
-
-**Link:** [GitHub](https://github.com/bagustambunan/StickerIOS/)
-**Tech stack:** Swift, SwiftUI
-
----
-
-### Oh My Bear Cute Stickers
-
-An Android entertainment app featuring a collection of original cute stickers. Reached **1M+ downloads** on Google Play Store.
-
-**Link:** [Google Play Store](https://play.google.com/store/apps/details?id=com.DuduuStudio.BearSticker)
-**Tech stack:** Android Studio
-
----
-
-### SIGAP COVID-19 LINE Chatbot
-
-A LINE chatbot that provides real-time COVID-19 information and answers common questions about the pandemic in Indonesia. Adopted and published by the Faculty of Computer Science, University of North Sumatra (Fasilkom-TI USU).
-
-**Link:** [LINE](https://page.line.me/?accountId=897pjzic)
-**Tech stack:** Python
-
----
-
-## Open Source Contributions
-
-### Fix 16KB page size compatibility issue — WhatsApp Stickers
-
-Upgraded Fresco from 2.5.0 to 3.5.0 to fix 16KB page size alignment issues with native libraries.
-
-**Link:** [Pull Request #1114](https://github.com/WhatsApp/stickers/pull/1114)
-
----
-
-## Publications
-
-- [Handling Big Numbers in JavaScript Without Losing Your Mind](https://bagustambunan.medium.com/handling-big-numbers-in-javascript-without-losing-your-mind-8aa221643428) — Nov 2025
-- [Project Using the Spotify API in React JS](https://bagustambunan.medium.com/project-menggunakan-spotify-api-di-react-js-19dbc5765a05) — Jul 2021
-
----
-
-## Other Experience
-
-### LINE Sticker Creator
-
-**LINE** | Sep 2015 – Jul 2020
-
-Created and sold stickers, themes, and animated stickers on the LINE Creators Market.
-
-**Achievements:**
-
-- Won **MVP** on LINE Creators Market for achieving the highest sales in September 2018.
-- Selected as a winner to visit the **LINE Office in Tokyo**.
-- Won **2nd Place** in LINE Creators Competition (Student Sticker Category).
-- Won **2nd Place** in LINE Creators Competition (Student Theme Category).
-
-**Portfolio:** [LINE Store](https://store.line.me/stickershop/author/789344/en) | [Pencil loves Paper](https://store.line.me/stickershop/author/75954/en) | [PECEL Stickers](https://store.line.me/stickershop/author/89968/en)
