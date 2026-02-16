@@ -5,7 +5,8 @@ const softwareEngineerProjects: Project[] = [
   {
     name: "Sticker iOS",
     role: RoleEnum.SOFTWARE_ENGINEER,
-    description: "An iOS app to add sticker packs to WhatsApp or WhatsApp Business.",
+    description:
+      "A native iOS app built with Swift and SwiftUI that lets users browse, search, and add sticker packs to WhatsApp or WhatsApp Business.",
     image: "images/project-oh-my-bear.png",
     link: "https://github.com/bagustambunan/StickerIOS/",
     stacks: [swiftStack, swiftUiStack],
@@ -14,53 +15,52 @@ const softwareEngineerProjects: Project[] = [
       {
         title: "Features:",
         descriptions: [
-          "Support static and animated stickers",
-          "Search sticker packs",
-          "Add sticker packs to favorites",
-          "Popular sticker packs",
-          "Most liked characters",
-          "All characters and character detail page",
+          "Support for both static and animated stickers",
+          "Search and filter sticker packs",
+          "Favorites system for quick access to preferred packs",
+          "Popular sticker packs and most liked characters sections",
+          "Detailed character pages with full sticker previews",
         ],
       },
     ],
     image_list: [
       {
         title: "Splash Screen",
-        url: "images/screenshots/pic-1-splash-screen.png"
+        url: "images/screenshots/pic-1-splash-screen.png",
       },
       {
         title: "Main Page",
-        url: "images/screenshots/pic-2-main-page.png"
+        url: "images/screenshots/pic-2-main-page.png",
       },
       {
         title: "All Characters Page",
-        url: "images/screenshots/pic-3-all-characters.png"
+        url: "images/screenshots/pic-3-all-characters.png",
       },
       {
         title: "Search Page",
-        url: "images/screenshots/pic-4-search.png"
+        url: "images/screenshots/pic-4-search.png",
       },
       {
         title: "Favorite Page",
-        url: "images/screenshots/pic-5-favorite.png"
+        url: "images/screenshots/pic-5-favorite.png",
       },
       {
         title: "About Page",
-        url: "images/screenshots/pic-6-about.png"
-      }
-    ]
+        url: "images/screenshots/pic-6-about.png",
+      },
+    ],
   },
   {
     name: "Oh My Bear Cute Stickers",
     role: RoleEnum.SOFTWARE_ENGINEER,
     description:
-      "An Android app to get collection of cute stickers created by me.",
+      "An Android entertainment app featuring a collection of original cute stickers. Reached 1M+ downloads on Google Play Store.",
     image: "images/project-oh-my-bear.png",
     link: "https://play.google.com/store/apps/details?id=com.DuduuStudio.BearSticker",
     details: [
       {
         title: "Achievements:",
-        descriptions: ["This app reached 1M+ downloads on Google Play Store."],
+        descriptions: ["Reached 1M+ downloads on Google Play Store."],
       },
     ],
     stacks: [androidStudioStack],
@@ -70,11 +70,13 @@ const softwareEngineerProjects: Project[] = [
     name: "SIGAP COVID-19 LINE Chatbot",
     role: RoleEnum.SOFTWARE_ENGINEER,
     description:
-      "SIGAP COVID-19 is a chatbot that answers questions about Covid-19 in Indonesia.",
+      "A LINE chatbot that provides real-time COVID-19 information and answers common questions about the pandemic in Indonesia. Published by Fasilkom-TI USU.",
     details: [
       {
         title: "Achievements:",
-        descriptions: ["This chatbot was then published by Fasilkom-TI USU."],
+        descriptions: [
+          "Adopted and published by the Faculty of Computer Science, University of North Sumatra (Fasilkom-TI USU).",
+        ],
       },
     ],
     image: "images/project-sigap.png",
@@ -87,12 +89,13 @@ const graphicDesignerProjects: Project[] = [
   {
     name: "Cute Duduu 2",
     role: RoleEnum.GRAPHIC_DESIGNER,
-    description: "Animated stickers for LINE.",
+    description:
+      "Animated sticker set for LINE that won MVP on LINE Creators Market for achieving the highest sales in September 2018.",
     details: [
       {
         title: "Achievements:",
         descriptions: [
-          "This sticker set won MVP on LINE Creators Market for achieving the highest sales in September 2018.",
+          "Won MVP on LINE Creators Market for the highest sales in September 2018.",
         ],
       },
     ],
@@ -102,12 +105,13 @@ const graphicDesignerProjects: Project[] = [
   {
     name: "Cute Duduu: Cari Perhatian",
     role: RoleEnum.GRAPHIC_DESIGNER,
-    description: "Create sound animated stickers for LINE Store Official.",
+    description:
+      "Sound animated sticker set created for LINE Store Official, commissioned by LINE after the success of Cute Duduu 2.",
     details: [
       {
         title: "Fun facts:",
         descriptions: [
-          'This sticker was made at the request of LINE because the previous sticker "Cute Duduu 2" won MVP.',
+          'Commissioned by LINE after "Cute Duduu 2" won MVP for highest monthly sales.',
         ],
       },
     ],
@@ -117,12 +121,13 @@ const graphicDesignerProjects: Project[] = [
   {
     name: "Oh My Panda",
     role: RoleEnum.GRAPHIC_DESIGNER,
-    description: "Animated stickers for LINE.",
+    description:
+      "Animated sticker set for LINE. Won 2nd Place in LINE Creators Competition (Student Sticker Category).",
     details: [
       {
         title: "Achievements:",
         descriptions: [
-          "This sticker set won 2nd Place in LINE Creators Competition (Student Sticker Category). Read: https://kumparan.com/kumparantech/selamat-ini-dia-daftar-pemenang-line-creator-competition-1537943693286714133/2",
+          "Won 2nd Place in LINE Creators Competition (Student Sticker Category).",
         ],
       },
     ],
@@ -133,7 +138,7 @@ const graphicDesignerProjects: Project[] = [
     name: "Puspiptek Logo",
     role: RoleEnum.GRAPHIC_DESIGNER,
     description:
-      "Participated in the Puspiptek logo creation competition. Won 2nd place.",
+      "Won 2nd place in the Puspiptek logo design competition.",
     image: "images/project-puspiptek.jpg",
     link: "",
   },
